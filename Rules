@@ -13,21 +13,35 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/stylesheet/' do
+compile 'resources/css/*' do
+  filter :rainpress
+end
+
+compile 'resources/js/*' do
+end
+
+compile 'resources/*' do
   # don’t filter or layout
 end
 
 compile '*' do
-  if item.binary?
-    # don’t filter binary items
-  else
-    filter :erb
-    layout 'default'
-  end
+    if item.binary?
+        # don’t filter binary items
+    else
+        case item[:extension]
+            when 'md'
+                filter :kramdown
+                layout 'default'
+            when 'erb'
+                filter :erb
+                layout 'default'
+        end
+    end
 end
 
-route '/stylesheet/' do
-  '/style.css'
+
+route '/resources/*' do
+    item.identifier.chop + '.' + item[:extension]
 end
 
 route '*' do
