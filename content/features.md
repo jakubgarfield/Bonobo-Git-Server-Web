@@ -7,14 +7,16 @@ tags: [Features, Roadmap, Screenshots]
 Features
 ===================================
 
-Bonobo Git Server for Windows is a web application you can install on your IIS. It provides you easy management and access to your git repositories.
+Bonobo Git Server for Windows is a web application you can install on your IIS. It provides you an easy management tool and access to your git repositories.
 
-* Secure and anonymous access to your git repositories
-* User friendly web interface for management
-* User and team based repository access management
-* Repository file browser
-* Commit browser
-* Localization
+The main features are
+
+* secure and anonymous access to git repositories,
+* user friendly web interface,
+* user and team based repository access,
+* repository browser,
+* commit browser,
+* localization.
 
 
 <hr />
@@ -32,7 +34,7 @@ The first screen you see is the login screen. On the second one administrators c
     </ul>
 </div>
 
-Bonobo Git Server shows you the list of all available repositories that you have created. On the detail page you can see the contributors, administrators and teams assigned to the repository.
+Bonobo Git Server shows you the list of all available repositories you'd created. On the detail page you can see the contributors, administrators and teams assigned to the repository.
 
 <div class="row-fluid">
     <ul class="thumbnails">
@@ -41,7 +43,7 @@ Bonobo Git Server shows you the list of all available repositories that you have
     </ul>
 </div>
 
-Repository browser allows you to see the structure of the project inside the web interface. It can display the file content if it is a text one and use a proper syntax highlighting. It also can display images.
+Repository browser allows you to see the structure of the project inside the web interface. It can display a content of a file if it is a text one and use a proper syntax highlighting. It also can display images.
 
 <div class="row-fluid">
 <ul class="thumbnails">
@@ -55,8 +57,8 @@ Another important part of Bonobo Git Server is the commit history browser. It di
 
 <div class="row-fluid">
     <ul class="thumbnails">
-        <li class="span6"><a href="#" class="thumbnail"><img alt="Commits" src="/resources/img/screenshots/commits.png"></a></li>
-        <li class="span6"><a href="#" class="thumbnail"><img alt="Commit Details" src="/resources/img/screenshots/commit-details.png"></a></li>
+        <li class="span6"><a href="/resources/img/screenshots/commits.png" class="thumbnail"><img alt="Commits" src="/resources/img/screenshots/commits.png"></a></li>
+        <li class="span6"><a href="/resources/img/screenshots/commit-details.png" class="thumbnail"><img alt="Commit Details" src="/resources/img/screenshots/commit-details.png"></a></li>
     </ul>
 </div>
 
@@ -65,7 +67,7 @@ The server is localized to more than 5 languages.
 
 <div class="row-fluid">
     <ul class="thumbnails">
-        <li class="span12"><a href="#" class="thumbnail"><img alt="260x180" src="/resources/img/screenshots/localization.png"></a></li>
+        <li class="span12"><a href="/resources/img/screenshots/localization.png" class="thumbnail"><img alt="Localization" src="/resources/img/screenshots/localization.png"></a></li>
     </ul>
 </div>
 
