@@ -4,17 +4,48 @@ description: Tracks changes and bug fixes between different versions of Bonobo G
 tags: [Changelog, Changes, Bug Fixes, Features]
 ---
 
+Changelog
+======================================
+
+See the list of all features, changes and bug fixes between different versions. Before updating Bonobo Git Server to a new version, please, read carefully the compatibility issues.
+
 ## Version 1.2.0
 
-**25 May 2013**
-
-### Description
+**30 May 2013**
 
 ### Features 
 
+* Replaced multiselects with the checkbox lists - Mark N
+* Turkish translation - [zafer06](https://github.com/zafer06)
+* One URL for secure and anonymous access - [Aimeast](https://github.com/Aimeast)
+* Default settings file is created automatically when not exists - [Aimeast](https://github.com/Aimeast)
+* Default database is created automatically when not exists - [Aimeast](https://github.com/Aimeast)
+* EF 5.0 code first introduction - [Aimeast](https://github.com/Aimeast)
+* Switched to ASP.NET MVC 4 and .NET 4.5
+* Nuget packages used for external dependencies
+* Allow to pass username and password from URL
+* Removed git.aspx from URL
+* Settings must be set before the first use
+* Git logo added
+
 ### Bug Fixes
 
+* Changing password for normal user
+* Display large binary files
+* Hashing password with proper encoding - [Aimeast](https://github.com/Aimeast)
+* Max allowed content length set to 4MB
+* Page width set to 980px - [Aimeast](https://github.com/Aimeast)
+* Fixed integration with TeamCity - [micchickenburger](https://github.com/micchickenburger)
+
 ### Compatibility Issues
+
+* Password is not compatible with the previous version due to encoding change.
+    * For fixing this issue please use [sqlite administrator](http://sqliteadmin.orbmu2k.de/), open the database file located in App_Data and change your record in the table User and set the field Password to *21232F297A57A5A743894A0E4A801FC3* which means *admin*.
+    * You can run this sql statement `UPDATE User SET Password = '21232F297A57A5A743894A0E4A801FC3' WHERE Username = 'YOUR USERNAME'`
+* Database name changed from Bonobo.Git.Server.Release.db to Bonobo.Git.Server.db
+    * Go to App_Data folder and rename the file
+* Windows Server 2003 is not supported because of the ASP.NET MVC 4.5 and .NET 4.5 versions
+    * IIS 7+ and .NET 4.5 and ASP.NET MVC 4.5 is required to run Bonobo Git Server
 
 
 <hr />
