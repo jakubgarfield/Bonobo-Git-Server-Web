@@ -12,7 +12,6 @@ How can you get support for a Bonobo Git Server?
 You can use project's 
 
 * [forum](http://forum.chodounsky.net/viewforum.php?f=7),
-* [wiki](http://wiki.chodounsky.net/index.php?title=Bonobo_Git_Server),
 * [github](https://github.com/jakubgarfield/Bonobo-Git-Server),
 
 <p>or you can <a href="mailto:&#106;&#097;&#107;&#117;&#098;&#046;&#099;&#104;&#111;&#100;&#111;&#117;&#110;&#115;&#107;&#121;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">mail me</a> directly.</p>
