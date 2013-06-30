@@ -9,6 +9,30 @@ Changelog
 
 See the list of all features, changes and bug fixes between different versions. Before updating Bonobo Git Server to a new version, please, read carefully the compatibility issues.
 
+
+## Version 1.3.0 
+
+**30 June 2013**
+
+### Features
+
+* Gitsharp removed
+* Switched to libgit2
+* Tag support added
+* Improved repository browser - blog support and faster navigation
+
+### Bug Fixes
+
+* Enable repository browser view  of ASP.NET special folders
+* Enable repository browser view of any extension
+* Fix a crash issue if there is not master branch - [Yubo Xie](https://github.com/xieyubo)
+* Fix a crash if user browses an empty repository - [Yubo Xie](https://github.com/xieyubo)
+* Fixing incorrect hint place - [TheBlueSky](https://github.com/TheBlueSky)
+
+
+<hr />
+
+
 ## Version 1.2.0
 
 **30 May 2013**
