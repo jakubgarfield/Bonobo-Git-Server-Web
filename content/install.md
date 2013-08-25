@@ -20,7 +20,8 @@ Install
 * [ASP.NET MVC 4](http://www.asp.net/mvc/mvc4)
     * You can use the [standalone installer](http://www.microsoft.com/en-us/download/details.aspx?id=30683) even though it says it requires VS 2010 and higher.
     * Don't forget to register MVC framework with your IIS
-        * Run `%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe -ir` with administrator privileges
+        * Windows 8 - Windows Features: IIS -> WWWS -> Application Development Features -> ASP.NET 4.5.
+        * Other - Run `%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe -ir` with administrator privileges
 
 
 <hr />
