@@ -16,7 +16,8 @@ The main features are
 * user and team based repository access,
 * repository browser,
 * commit browser,
-* localization.
+* localization and
+* supports Windows Authentication.
 
 
 <hr />
@@ -70,41 +71,3 @@ The server is localized to more than 5 languages.
         <li class="span12"><a href="/resources/img/screenshots/localization.png" class="thumbnail"><img alt="Localization" src="/resources/img/screenshots/localization.png"></a></li>
     </ul>
 </div>
-
-
-<hr />
-
-
-Compatibility
--------------
-You should have .NET Framework 4.5 and ASP.NET MVC4 installed on the target machine. The server should be compatible with the following configurations.
-
-* Microsoft Vista & IIS 7+
-* Microsoft Windows 7 & IIS 7+
-* Microsoft Windows 8 & IIS 7+
-* Microsoft Windows 2008 Server & IIS 7+
-* Microsoft Windows 2012 & IIS 7+
-
-User interface was tested on these internet browser.
-
-* Internet Explorer 9.0
-* Internet Explorer 8.0
-* Internet Explorer 7.0, Internet Explorer 6.0 (minor viewing issues)
-* Chrome
-* Firefox 4.0
-
-
-<hr />
-
-
-Roadmap
-----------------------------------
-
-Roadmap is a list of short-term and long-term goals. Do you want to <a href="/support/">influence</a> where the project is heading? 
-
-* Switch to libgit2sharp or ngit
-    * Faster and more reliable git collaboration
-* Support git tags
-* Investigate git submodules
-* Plugins for post commit actions
-* Plugins for schedules actions

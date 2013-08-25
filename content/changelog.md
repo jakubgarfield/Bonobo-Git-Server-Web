@@ -4,10 +4,29 @@ description: Tracks changes and bug fixes between different versions of Bonobo G
 tags: [Changelog, Changes, Bug Fixes, Features]
 ---
 
-Changelog
-======================================
+## Version 2.0
 
-See the list of all features, changes and bug fixes between different versions. Before updating Bonobo Git Server to a new version, please, read carefully the compatibility issues.
+**25 August 2013**
+
+### Features
+
+* Windows Authentication Support
+* Spanish Translation
+
+### Bug Fixes
+
+* Usernames are normalized to invariant lowercase.
+* Fix text in Chinese translation
+
+
+### Compatibility Issues
+
+* Converts all the usernames to lowercase. 
+	* Keep that in mind while logging
+	* Only ASCII chars are supported even for existing usernames, if you have other characters in your username it is recommended to create a new user.
+
+
+<hr />
 
 
 ## Version 1.3.0 
@@ -28,7 +47,6 @@ See the list of all features, changes and bug fixes between different versions. 
 * Fix a crash issue if there is not master branch - [Yubo Xie](https://github.com/xieyubo)
 * Fix a crash if user browses an empty repository - [Yubo Xie](https://github.com/xieyubo)
 * Fixing incorrect hint place - [TheBlueSky](https://github.com/TheBlueSky)
-
 
 <hr />
 
@@ -70,7 +88,6 @@ See the list of all features, changes and bug fixes between different versions. 
     * Go to App_Data folder and rename the file
 * Windows Server 2003 is not supported because of the ASP.NET MVC 4.5 and .NET 4.5 versions
     * IIS 7+ and .NET 4.5 and ASP.NET MVC 4.5 is required to run Bonobo Git Server
-
 
 <hr />
 
