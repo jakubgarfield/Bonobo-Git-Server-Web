@@ -1,6 +1,6 @@
 ---
-title: Install
-description: This pages shows you how easy to install Bonobo Git Server is.
+title: Update
+description: This pages shows you how easy to update Bonobo Git Server is.
 tags: [Update, Update Guide]
 ---
 

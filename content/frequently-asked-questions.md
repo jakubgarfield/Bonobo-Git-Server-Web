@@ -1,5 +1,5 @@
 ---
-title: Install
+title: FAQ
 description: This pages shows you how easy to install Bonobo Git Server is.
 tags: [FAQ, Question, Bonobo Git Server Questions, Frequently Asked Questions]
 ---

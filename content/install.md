@@ -58,3 +58,9 @@ These steps ilustrates simple installation with Windows 2008 Server and IIS 7. T
     * Default credentials are username: **admin** password: **admin**
 
 ![Launch browser and sign in](/resources/img/installation/install_iis7_git.png)
+
+Bonobo Git Server is configured to use [forms authentication](/forms-authentication/). If you want to change it follow up instruction on the following sites.
+
+* [Forms Authentication](/forms-authentication/)
+* [Windows Authentication](/windows-authentication/)
+* [Basic Authentication](/basic-authentication/)
