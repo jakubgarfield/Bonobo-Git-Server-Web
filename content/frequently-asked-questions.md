@@ -48,3 +48,20 @@ For allowing anonymous push you have to modify global settings.
 * Go to **Global Settings**.
 * Check the value **Allow push for anonymous repositories**
 * Save changes.
+
+
+#### Bonobo Git Server doesn't server CSS
+
+This is a common issue for Windows 8 users, please see the [topic](http://forum.chodounsky.net/viewtopic.php?f=11&t=252). The solution is simple:
+
+* Go to **Turn windows features on or off** screen
+* Navigate IS -> WWWS -> Common HTTP Features
+* Tick **Static Content**
+
+#### Cloning Error - RPC failed
+
+There are multiple reasons why this error can occure on the client, but the most frequent ones are related to the size of the request. If you encounter this issue try to increase the following values.
+
+* run **git config http.postBuffer [desired size]** on your client, you can try 524288000
+* increase **&lt;requestLimits maxAllowedContentLength="[desired size]"&gt;** in web.config; the size could be 1073741824
+* increase **&lt;httpRuntime maxRequestLength="[desired size]"&gt;** in web.config; try the value 1024000
