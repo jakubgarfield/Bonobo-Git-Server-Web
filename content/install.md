@@ -20,6 +20,7 @@ This page covers simple Bonobo Git Server installation. For other section check 
     * Windows Vista SP2, Windows 7, Windows 8 and higher
     * Windows Server 2008 R2, Windows Server 2008 SP2, Windows Server 2012 and higher
 * [ASP.NET MVC 4](http://www.asp.net/mvc/mvc4)
+    * This step is not necessary for Windows Server 2012 R2
     * You can use the [standalone installer](http://www.microsoft.com/en-us/download/details.aspx?id=30683) even though it says it requires VS 2010 and higher.
     * Don't forget to register MVC framework with your IIS
         * Windows 8 - Windows Features: IIS -> WWWS -> Application Development Features -> ASP.NET 4.5.
