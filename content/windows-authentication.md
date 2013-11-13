@@ -62,7 +62,7 @@ For the second one, Bonobo.Git.Server.Interface, let's assume that you install t
 ...
 
 <connectionStrings>    
-    <add name="BonoboGitServerContext" connectionString="C:\inetpub\wwwroot\Bonobo.Git.Server\App_Data\Bonobo.Git.Server.db" providerName="System.Data.SQLite" />
+    <add name="BonoboGitServerContext" connectionString="Data Source=C:\inetpub\wwwroot\Bonobo.Git.Server\App_Data\Bonobo.Git.Server.db" providerName="System.Data.SQLite" />
 </connectionStrings>
 
 ...
