@@ -66,4 +66,4 @@ Bonobo Git Server is configured to use [forms authentication](/forms-authenticat
 * [Windows Authentication](/windows-authentication/)
 * [Basic Authentication](/basic-authentication/)
 
-If you have any issues with the installation try to search [FAQ](/frequently-asked-questions/) and [forum](http://forum.chodounsky.net/viewforum.php?f=7).
+If you have any issues with the installation try to search [FAQ](/frequently-asked-questions/) and [forum](https://groups.google.com/forum/#!forum/bonobo-git-server).
