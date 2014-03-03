@@ -4,6 +4,32 @@ description: Tracks changes and bug fixes between different versions of Bonobo G
 tags: [Changelog, Changes, Bug Fixes, Features]
 ---
 
+## Version 2.1
+
+**3 March 2014**
+
+### Features
+
+* RAW file display
+* Scanning for existing repositories
+* Select a default language in settings section
+* Efficient working with streams
+* Swedish localization - [JLedel](https://github.com/JLedel)
+* Russian localization - grigoryev
+* Spanish localization - [AHTA](https://github.com/AHTA)
+* Download repository as ZIP - [Rémy de Sérésin](https://github.com/latop2604)
+
+### Bug Fixes
+
+* Fixed a problem viewing files with '+' or '&' in the path
+* Fixed a problem viewing branches and tags with '/' in the name
+* Fixed missing label for team members when creating team
+* Tweaked English strings
+
+
+<hr />
+
+
 ## Version 2.0.1
 
 **30 August 2013**
