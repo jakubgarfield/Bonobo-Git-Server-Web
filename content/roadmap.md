@@ -14,4 +14,3 @@ Roadmap is a list of short-term and long-term goals. Do you want to <a href="/su
 * Plugins for schedules actions
 * UI Search
 * Graphical view of branches
-* Diff for files
