@@ -11,3 +11,8 @@ h3 a.brand  { background:url(/resources/img/git-logo.png) no-repeat 0px 0px; dis
 h3 a.brand:hover  { text-decoration: none; }
 
 .ads { position: absolute; margin-left: 870px;}
+
+.donations { margin: 0 auto; text-align: center;}
+.blockchain.stage-begin img { cursor: pointer;}
+.paypal { margin-top: 2em; }
+.gittip { margin-top: 2em;}
