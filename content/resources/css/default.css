@@ -10,4 +10,15 @@ body { padding-top: 20px; padding-bottom: 40px; }
 h3 a.brand  { background:url(/resources/img/git-logo.png) no-repeat 0px 0px; display: block; text-decoration: none; padding-left: 48px; padding-bottom: 3px;}
 h3 a.brand:hover  { text-decoration: none; }
 
-.subscriptions { margin: 0 auto; text-align: center;}
+.subscriptions.thumbnails { margin: 0 auto 2.5em 0; text-align: center;}
+.subscriptions ul { margin: 0;}
+.subscriptions ul li { margin: 0 0 0.5em 0; list-style: none;}
+.subscriptions h3.price { margin: 0.75em 0 0 0; }
+.subscriptions p.muted { margin-bottom: 1.75em; }
+
+.pricing.subscriptions { margin: 2em 0;}
+
+.donations { margin: 0 auto; text-align: center;}
+.blockchain.stage-begin img { cursor: pointer;}
+.paypal { margin-top: 2em; }
+.gittip { margin-top: 2em;}
