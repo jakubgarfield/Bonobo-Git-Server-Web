@@ -4,6 +4,28 @@ description: Tracks changes and bug fixes between different versions of Bonobo G
 tags: [Changelog, Changes, Bug Fixes, Features]
 ---
 
+## Version 3.2
+
+**19 May 2014**
+
+### Features
+
+* Repository browser performance improvement
+* Asynchronnous load of commit messages in browser
+* Better English localization
+* Improved deployment process
+* Nuget cleanup
+
+
+### Bug Fixes
+
+* Fixed #102 Create Team button is missing for Windows Authentication mode
+* Fixed #104 Missing highlight.pack.js
+* Fixed #117 Split commit messages
+
+
+<hr />
+
 ## Version 3.1
 
 **27 March 2014**
