@@ -23,15 +23,10 @@ h3 a.brand:hover  { text-decoration: none; }
 .paypal { margin-top: 2em; }
 .gittip { margin-top: 2em;}
 
-.ad { position: absolute; width: 160px; top: 125px;}
-.ad-left { margin-left: -200px; }
+.ad { position: absolute; width: 160px; top: 40px;}
 .ad-right { margin-left: 840px; }
-.ad-center { margin-bottom: 1.5em;}
+.ad-center { margin-top: 1.5em;}
 
 @media (max-width: 800px) {
   .ad { display: none; }
-}
-
-@media (max-width: 1240px) {
-  .ad-left { display: none; }
 }
