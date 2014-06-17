@@ -11,6 +11,7 @@ This page covers simple Bonobo Git Server installation. Be sure to check [prereq
 
 The following steps covers an installation with Windows 2008 Server and IIS 7. They are exactly the same for any higher platforms (Windows Server 2012 and IIS 8.0+).
 
+* [Download](/) the latest version of Bonobo Git Server from the front page
 * **Extract the files** from the installation archive to `C:\inetpub\wwwroot`
 
 ![Copy the files from archive](/resources/img/installation/install_iis7_copy.png)
