@@ -79,7 +79,7 @@ Thank you for using this project and your support.
 * Set the desired value for the **Repository Directory**.
     * Directory must exist on the hard drive.
     * IIS User must have proper permissions to modify the folder.
-* Save changes.    
+* Save changes.
 
 #### Can I allow anonymous access to a repository?
 
@@ -111,6 +111,8 @@ There are multiple reasons why this error can occure on the client, but the most
 * increase **&lt;requestLimits maxAllowedContentLength="[desired size]"&gt;** in web.config; the size could be 1073741824
 * increase **&lt;httpRuntime maxRequestLength="[desired size]"&gt;** in web.config; try the value 1024000
 
+Apparently, there is no need in limiting maxRequestLength on IIS 8.0 so if you run into troubles, try to remove the line.
+
 #### SSL and large repositories
 
-When using SSL and pushing large repository you should increase the variable size as described above and if it still doesn't help you should apply the following Microsoft patch ([KB2634328](http://support.microsoft.com/kb/2634328/en-us)). 
+When using SSL and pushing large repository you should increase the variable size as described above and if it still doesn't help you should apply the following Microsoft patch ([KB2634328](http://support.microsoft.com/kb/2634328/en-us)).
