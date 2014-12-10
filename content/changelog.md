@@ -3,6 +3,18 @@ title: Changelog
 description: Tracks changes and bug fixes between different versions of Bonobo Git Server for Windows
 tags: [Changelog, Changes, Bug Fixes, Features]
 ---
+## Version 3.4.2
+
+**11 Dec 2014**
+
+### Features
+
+* Support for large files and large repos - kfarnung
+* Displaying markdown in repo browser - kengibous
+
+### Bug Fixes
+
+* Disabling post commit auditing as it causes problems with certain clients - stanshillis
 
 ## Version 3.4.1
 
