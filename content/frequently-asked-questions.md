@@ -95,7 +95,14 @@ For allowing anonymous push you have to modify global settings.
 * Save changes.
 
 
-#### Bonobo Git Server doesn't server CSS
+#### fatal: http: /info/refs not valid: is this a git repository?
+
+This is a git client way of saying that it didn't receive git stream as a response from a server. That usually means, that there has been an error on the server side.
+
+To determine what type of error it is, view the log file located at `App_Data/Bonobo.Git.Server.Errors.log`.
+
+
+#### Bonobo Git Server doesn't serve CSS
 
 This is a common issue for Windows 8 users, please see the [topic](http://forum.chodounsky.net/viewtopic.php?f=11&t=252). The solution is simple:
 
