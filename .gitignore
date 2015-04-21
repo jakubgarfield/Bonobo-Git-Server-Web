@@ -1,0 +1,4 @@
+output/
+tmp/
+crash.log
+.DS_Store

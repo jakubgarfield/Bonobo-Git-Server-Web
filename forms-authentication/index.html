@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>Bonobo Git Server - Install - Forms Authentication</title>
+        <meta name="author" content="Jakub Chodounsky">
+        <meta name="robots" content="all, follow">
+        <meta name="description" content="Setup forms authentication with Bonobo Git Server">
+        <meta name="keywords" content="Bonobo Git Server, Git Server for Windows, Open Source Git Server, Git, IIS Git, ASP .NET MVC, Install, Installation Guide, Quickstart, Forms Authentication">
+        <link rel="stylesheet" type="text/css"  href="/resources/css/bootstrap.css">   
+        <link rel="stylesheet" type="text/css"  href="/resources/css/default.css">
+        <link rel="stylesheet" type="text/css"  href="/resources/css/prettify.css">
+    </head>
+    <body>
+        <div class="container-narrow">
+            <div class="masthead">
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="/install/">Install</a></li>
+                    <li><a href="/screenshots/">Screenshots</a></li>
+                    <li><a href="/features/">Features</a></li>                    
+                    <li><a href="/documentation/">Documentation</a></li>
+                    <li><a href="/frequently-asked-questions/">Questions</a></li>
+                </ul>
+                <h3><a class="brand muted" href="/">Bonobo Git Server</a></h3>
+            </div>
+            <hr />
+            
+            <h1 id="forms-authentication">Forms Authentication</h1>
+
+<p>This method should be used when you don’t want your Internet Information Services to handle the authentication. Therefore, use it when you want to keep the users separated from the Windows Authentication process or you don’t have it configured at all.</p>
+
+<p>You want to use this mode when you handle connection from outside your network—keep in mind though that with VPN you can use Windows Authentication as well. Also, forms authentication was the only mode available in Bonobo Git Server until version 2.0.</p>
+
+<h2 id="how-to-configure-bonobo-git-server">How to configure Bonobo Git Server?</h2>
+
+<p>The default settings should be already configured for this mode. If it, for any reason, isn’t so, you should simply change few values in the <strong>web.config</strong> file located in the root of the application.</p>
+
+<pre class="prettyprint"><code>&lt;appSettings&gt;
+    &lt;add key="ClientValidationEnabled" value="true" /&gt;
+    &lt;add key="UnobtrusiveJavaScriptEnabled" value="true" /&gt;
+    &lt;add key="UserConfiguration" value="~\App_Data\config.xml" /&gt;
+    &lt;add key="DefaultRepositoriesDirectory" value="~\App_Data\Repositories" /&gt;
+    &lt;add key="GitPath" value="~\App_Data\Git\git.exe" /&gt;
+    &lt;add key="ShouldImportWindowsUserAsAdministrator" value="false" /&gt;   
+&lt;/appSettings&gt;
+
+...
+
+&lt;connectionStrings&gt;    
+    &lt;add name="BonoboGitServerContext" connectionString="Data Source=|DataDirectory|Bonobo.Git.Server.db" providerName="System.Data.SQLite" /&gt;
+&lt;/connectionStrings&gt;
+
+...
+
+&lt;system.web&gt;
+    ...
+    &lt;authentication mode="None" /&gt;
+    ...
+&lt;/sytem.web&gt;
+</code></pre>
+
+<h2 id="how-to-configure-iis">How to configure IIS?</h2>
+
+<p>Enable <strong>Anonymous Authentication</strong> in IIS and disable the others. To do so, select the application, click on the authentication icon and set the value to of Anonymous Authentication to Enabled. The configuration should look like the following screenshot.</p>
+
+<p><img src="/resources/img/installation/iis_authentication_forms.png" alt="IIS enable Anonymous Authentication only" /></p>
+
+<h2 id="keep-in-mind">Keep in mind</h2>
+
+<p>Git is authenticating to the server via Basic Authentication protocol and the forms authentication send the password as a part of the request. If you want the communication to be safe you have to introduce SSL in your IIS. With the certificate your application will communicate over HTTPS and it will be encrypted.</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li><a href="/install/">Installation</a></li>
+  <li><a href="/web-config/">Web Configuration Documentation</a></li>
+</ul>
+
+
+            <hr />
+            <div class="footer">
+                <p class="text-center">&copy; <a href="http://chodounsky.net">Jakub Chodounsky</a> 2014  &middot; <a href="/privacy-policy/">Privacy Policy</a></p>
+            </div>
+      
+            <div class="ad ad-right">
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-5038943826605928" data-ad-slot="7444234903"></ins>				<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+           
+        </div>    
+
+        <script src="/resources/js/jquery-1.9.1.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+        <script src="/resources/js/prettify.js"></script>
+        <script src="/resources/js/lang-css.js"></script>
+        <script src="/resources/js/lang-lisp.js"></script>
+        <script src="/resources/js/lang-scala.js"></script>
+        <script src="/resources/js/lang-sql.js"></script>
+        <script src="/resources/js/lang-yaml.js"></script>
+        <script type="text/javascript" src="https://blockchain.info//Resources/wallet/pay-now-button.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40669399-1', 'bonobogitserver.com');
+            ga('send', 'pageview');
+
+            document.addEventListener('DOMContentLoaded',function() { prettyPrint(); });
+        </script>
+    </body>
+</html>

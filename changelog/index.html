@@ -1,0 +1,458 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>Bonobo Git Server - Changelog</title>
+        <meta name="author" content="Jakub Chodounsky">
+        <meta name="robots" content="all, follow">
+        <meta name="description" content="Tracks changes and bug fixes between different versions of Bonobo Git Server for Windows">
+        <meta name="keywords" content="Bonobo Git Server, Git Server for Windows, Open Source Git Server, Git, IIS Git, ASP .NET MVC, Changelog, Changes, Bug Fixes, Features">
+        <link rel="stylesheet" type="text/css"  href="/resources/css/bootstrap.css">   
+        <link rel="stylesheet" type="text/css"  href="/resources/css/default.css">
+        <link rel="stylesheet" type="text/css"  href="/resources/css/prettify.css">
+    </head>
+    <body>
+        <div class="container-narrow">
+            <div class="masthead">
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="/install/">Install</a></li>
+                    <li><a href="/screenshots/">Screenshots</a></li>
+                    <li><a href="/features/">Features</a></li>                    
+                    <li><a href="/documentation/">Documentation</a></li>
+                    <li><a href="/frequently-asked-questions/">Questions</a></li>
+                </ul>
+                <h3><a class="brand muted" href="/">Bonobo Git Server</a></h3>
+            </div>
+            <hr />
+            
+            <h2 id="version-360">Version 3.6.0</h2>
+
+<p>**2 Apr 2015</p>
+
+<h3 id="features">Features</h3>
+
+<ul>
+  <li>new commit message format - alexkuznetsov</li>
+  <li>french translation - glacasa</li>
+  <li>show personalised URL - sansys</li>
+  <li>added support for grouping repositories - lennardf1989</li>
+  <li>minimize group - sansys</li>
+  <li>link to commited changes - spoiledtechie</li>
+</ul>
+
+<h3 id="bug-fixes">Bug fixes</h3>
+
+<ul>
+  <li>fixed history and blame page - igoryk-zp</li>
+  <li>fixed back link - igoryk-zp</li>
+  <li>fixed russian translation - sansys</li>
+</ul>
+
+<h2 id="version-350">Version 3.5.0</h2>
+
+<p><strong>19 Feb 2015</strong></p>
+
+<h3 id="features-1">Features</h3>
+
+<ul>
+  <li>Remember me checkbox - whosa</li>
+  <li>zh-HK, zh-CHT translation and improved encoding - lkho</li>
+  <li>Improved commit layout - whosa</li>
+  <li>Repository allows dot and underscore in the name - mbedded</li>
+  <li>Convert tabs into spaces in blob and commit view - jafp</li>
+  <li>Enable password reset - kengibous</li>
+  <li>Add tags to commit view - heringeidaniel</li>
+</ul>
+
+<h3 id="bug-fixes-1">Bug fixes</h3>
+
+<ul>
+  <li>Fix #207 Remove the home variable from process info before adding it</li>
+  <li>Rescuing from IdentityNotMap Exception for Windows Authentication - jshepler</li>
+  <li>Fix to allow email addresses as users names, Issue #163 #158 - kengibous</li>
+  <li>zh-TW improved - tooto</li>
+</ul>
+
+<h2 id="version-343">Version 3.4.3</h2>
+
+<p><strong>14 Dec 2014</strong></p>
+
+<h3 id="features-2">Features</h3>
+
+<ul>
+  <li>Display readme.md in repository browser - kengibous</li>
+</ul>
+
+<h3 id="bug-fixes-2">Bug Fixes</h3>
+
+<ul>
+  <li>Fix broken download link for files - latop2604</li>
+</ul>
+
+<h2 id="version-342">Version 3.4.2</h2>
+
+<p><strong>11 Dec 2014</strong></p>
+
+<h3 id="features-3">Features</h3>
+
+<ul>
+  <li>Support for large files and large repos - kfarnung</li>
+  <li>Displaying markdown in repo browser - kengibous</li>
+</ul>
+
+<h3 id="bug-fixes-3">Bug Fixes</h3>
+
+<ul>
+  <li>Disabling post commit auditing as it causes problems with certain clients - stanshillis</li>
+</ul>
+
+<h2 id="version-341">Version 3.4.1</h2>
+
+<p><strong>2 Dec 2014</strong></p>
+
+<h3 id="bug-fixes-4">Bug fixes</h3>
+
+<ul>
+  <li>Made commit details parsing more robust for ReceivePackHook - kfarnung</li>
+</ul>
+
+<h2 id="version-34">Version 3.4</h2>
+
+<p><strong>30 Nov 2014</strong></p>
+
+<h3 id="features-4">Features</h3>
+
+<ul>
+  <li>Post commit hook - stanshillis</li>
+  <li>Commit auditing (username recording) - stashillis</li>
+  <li>Keep selected branch on all pages - stanshillis</li>
+  <li>Polish translation - Bartlomiej Kaminski</li>
+  <li>History view for files - Igor Nakonechnyi</li>
+  <li>Assembly version displayed in footer - Kyle Engibous</li>
+  <li>Display avatar in commits page - Igor Nakonechnyi</li>
+  <li>Blame for file - Igor Nakonechnyi</li>
+</ul>
+
+<h3 id="bug-fixes-5">Bug Fixes</h3>
+
+<ul>
+  <li>Disallow special characters for repository name - Matthias</li>
+</ul>
+
+<h2 id="version-33">Version 3.3</h2>
+
+<p><strong>22 Aug 2014</strong></p>
+
+<h3 id="features-5">Features</h3>
+
+<ul>
+  <li>Clone button for repositories in web management UI - latop2604</li>
+  <li>Support for custom title, logo, additional footer message - OttoNull</li>
+  <li>Add Active Directory group / Team synchronization - Louis-Charles Levasseur</li>
+  <li>Add audit logging of login success or failure - dnadle</li>
+</ul>
+
+<h3 id="bug-fixes-6">Bug Fixes</h3>
+
+<ul>
+  <li>Add missing french translation keys - latop2604</li>
+  <li>Add backwards compatible upgrade of method to store hashed passwords - embix</li>
+  <li>Fix crash when repo contain GitLink node - latop2604</li>
+  <li>Added generic message, if commit message is null or empty - SeitzDev</li>
+  <li>Fix #133 JSON body displayed when going back in repository view
+*</li>
+</ul>
+
+<h2 id="version-32">Version 3.2</h2>
+
+<p><strong>19 May 2014</strong></p>
+
+<h3 id="features-6">Features</h3>
+
+<ul>
+  <li>Repository browser performance improvement</li>
+  <li>Asynchronnous load of commit messages in browser</li>
+  <li>Better English localization</li>
+  <li>Improved deployment process</li>
+  <li>Nuget cleanup</li>
+</ul>
+
+<h3 id="bug-fixes-7">Bug Fixes</h3>
+
+<ul>
+  <li>Fixed #102 Create Team button is missing for Windows Authentication mode</li>
+  <li>Fixed #104 Missing highlight.pack.js</li>
+  <li>Fixed #117 Split commit messages</li>
+</ul>
+
+<hr />
+
+<h2 id="version-31">Version 3.1</h2>
+
+<p><strong>27 March 2014</strong></p>
+
+<h3 id="features-7">Features</h3>
+
+<ul>
+  <li>zh-TW Traditional Chinese Translation added - <a href="https://github.com/doggy8088">doggy8088</a></li>
+</ul>
+
+<h3 id="bug-fixes-8">Bug Fixes</h3>
+
+<ul>
+  <li>Fix German Localization - <a href="https://github.com/AliveDevil">AliveDevil</a></li>
+  <li>Fixed dissapearing menu</li>
+  <li>Fixed CSS Virtual Path (#99 and #100) - <a href="https://github.com/kfarnung">kfarnung</a></li>
+</ul>
+
+<hr />
+
+<h2 id="version-30">Version 3.0</h2>
+
+<p><strong>18 March 2014</strong></p>
+
+<h3 id="features-8">Features</h3>
+
+<ul>
+  <li>Major redesign</li>
+  <li>Diff view for files</li>
+  <li>Short SHA in commit view</li>
+  <li>Changed lines added to commits</li>
+</ul>
+
+<h3 id="bug-fixes-9">Bug Fixes</h3>
+
+<ul>
+  <li>Fix #93 Browsing cshtml extensions </li>
+  <li>Fix #94 Wrong date display for different locale</li>
+</ul>
+
+<hr />
+
+<h2 id="version-21">Version 2.1</h2>
+
+<p><strong>3 March 2014</strong></p>
+
+<h3 id="features-9">Features</h3>
+
+<ul>
+  <li>RAW file display</li>
+  <li>Scanning for existing repositories</li>
+  <li>Select a default language in settings section</li>
+  <li>Efficient working with streams</li>
+  <li>Swedish localization - <a href="https://github.com/JLedel">JLedel</a></li>
+  <li>Russian localization - grigoryev</li>
+  <li>Spanish localization - <a href="https://github.com/AHTA">AHTA</a></li>
+  <li>Download repository as ZIP - <a href="https://github.com/latop2604">Rémy de Sérésin</a></li>
+</ul>
+
+<h3 id="bug-fixes-10">Bug Fixes</h3>
+
+<ul>
+  <li>Fixed a problem viewing files with ‘+’ or ‘&amp;’ in the path</li>
+  <li>Fixed a problem viewing branches and tags with ‘/’ in the name</li>
+  <li>Fixed missing label for team members when creating team</li>
+  <li>Tweaked English strings</li>
+</ul>
+
+<hr />
+
+<h2 id="version-201">Version 2.0.1</h2>
+
+<p><strong>30 August 2013</strong></p>
+
+<h3 id="features-10">Features</h3>
+
+<ul>
+  <li>Displaying current username in Windows Authentication mode</li>
+</ul>
+
+<h3 id="bug-fixes-11">Bug Fixes</h3>
+
+<ul>
+  <li>Fixed the problem with repository view for normal users in Windows Authentication mode</li>
+</ul>
+
+<hr />
+
+<h2 id="version-20">Version 2.0</h2>
+
+<p><strong>25 August 2013</strong></p>
+
+<h3 id="features-11">Features</h3>
+
+<ul>
+  <li>Windows Authentication Support</li>
+  <li>Spanish Translation</li>
+</ul>
+
+<h3 id="bug-fixes-12">Bug Fixes</h3>
+
+<ul>
+  <li>Usernames are normalized to invariant lowercase.</li>
+  <li>Fix text in Chinese translation</li>
+</ul>
+
+<h3 id="compatibility-issues">Compatibility Issues</h3>
+
+<ul>
+  <li>Converts all the usernames to lowercase. 
+    <ul>
+      <li>Keep that in mind while logging</li>
+      <li>Only ASCII chars are supported even for existing usernames, if you have other characters in your username it is recommended to create a new user.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="version-130">Version 1.3.0</h2>
+
+<p><strong>30 June 2013</strong></p>
+
+<h3 id="features-12">Features</h3>
+
+<ul>
+  <li>Gitsharp removed</li>
+  <li>Switched to libgit2</li>
+  <li>Tag support added</li>
+  <li>Improved repository browser - blog support and faster navigation</li>
+</ul>
+
+<h3 id="bug-fixes-13">Bug Fixes</h3>
+
+<ul>
+  <li>Enable repository browser view  of ASP.NET special folders</li>
+  <li>Enable repository browser view of any extension</li>
+  <li>Fix a crash issue if there is not master branch - <a href="https://github.com/xieyubo">Yubo Xie</a></li>
+  <li>Fix a crash if user browses an empty repository - <a href="https://github.com/xieyubo">Yubo Xie</a></li>
+  <li>Fixing incorrect hint place - <a href="https://github.com/TheBlueSky">TheBlueSky</a></li>
+</ul>
+
+<hr />
+
+<h2 id="version-120">Version 1.2.0</h2>
+
+<p><strong>30 May 2013</strong></p>
+
+<h3 id="features-13">Features</h3>
+
+<ul>
+  <li>Replaced multiselects with the checkbox lists - Mark N</li>
+  <li>Turkish translation - <a href="https://github.com/zafer06">zafer06</a></li>
+  <li>One URL for secure and anonymous access - <a href="https://github.com/Aimeast">Aimeast</a></li>
+  <li>Default settings file is created automatically when not exists - <a href="https://github.com/Aimeast">Aimeast</a></li>
+  <li>Default database is created automatically when not exists - <a href="https://github.com/Aimeast">Aimeast</a></li>
+  <li>EF 5.0 code first introduction - <a href="https://github.com/Aimeast">Aimeast</a></li>
+  <li>Switched to ASP.NET MVC 4 and .NET 4.5</li>
+  <li>Nuget packages used for external dependencies</li>
+  <li>Allow to pass username and password from URL</li>
+  <li>Removed git.aspx from URL</li>
+  <li>Settings must be set before the first use</li>
+  <li>Git logo added</li>
+</ul>
+
+<h3 id="bug-fixes-14">Bug Fixes</h3>
+
+<ul>
+  <li>Changing password for normal user</li>
+  <li>Display large binary files</li>
+  <li>Hashing password with proper encoding - <a href="https://github.com/Aimeast">Aimeast</a></li>
+  <li>Max allowed content length set to 4MB</li>
+  <li>Page width set to 980px - <a href="https://github.com/Aimeast">Aimeast</a></li>
+  <li>Fixed integration with TeamCity - <a href="https://github.com/micchickenburger">micchickenburger</a></li>
+</ul>
+
+<h3 id="compatibility-issues-1">Compatibility Issues</h3>
+
+<ul>
+  <li>Password is not compatible with the previous version due to encoding change.
+    <ul>
+      <li>For fixing this issue please use <a href="http://sqliteadmin.orbmu2k.de/">sqlite administrator</a>, open the database file located in App_Data and change your record in the table User and set the field Password to <em>0CC52C6751CC92916C138D8D714F003486BF8516933815DFC11D6C3E36894BFA044F97651E1F3EEBA26CDA928FB32DE0869F6ACFB787D5A33DACBA76D34473A3</em> which means <em>admin</em>.</li>
+      <li>You can run this sql statement <code>UPDATE User SET Password = '0CC52C6751CC92916C138D8D714F003486BF8516933815DFC11D6C3E36894BFA044F97651E1F3EEBA26CDA928FB32DE0869F6ACFB787D5A33DACBA76D34473A3' WHERE Username = 'YOUR USERNAME'</code></li>
+    </ul>
+  </li>
+  <li>Database name changed from Bonobo.Git.Server.Release.db to Bonobo.Git.Server.db
+    <ul>
+      <li>Go to App_Data folder and rename the file</li>
+    </ul>
+  </li>
+  <li>Windows Server 2003 is not supported because of the ASP.NET MVC 4.5 and .NET 4.5 versions
+    <ul>
+      <li>IIS 7+ and .NET 4.5 and ASP.NET MVC 4.5 is required to run Bonobo Git Server</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="version-110">Version 1.1.0</h2>
+
+<p><strong>9 October 2011</strong></p>
+
+<h3 id="features-14">Features</h3>
+
+<ul>
+  <li>Administrator can create new user accounts</li>
+  <li>Settings
+    <ul>
+      <li>Disable anonymous user registration (by default user registration is disabled and only administrator can create new users)</li>
+      <li>Disable creation repository by users (by default only administrator can create new repositories)</li>
+    </ul>
+  </li>
+  <li>Confirmation for Team, User and Repository removals
+    <ul>
+      <li>Security hole with delete on GET removed</li>
+    </ul>
+  </li>
+  <li>Download link for text based files in repository browser</li>
+  <li>Chinese translation added</li>
+  <li>Japanese translation added</li>
+  <li>Reasonable states returned to git client if authentication failed or if repository does not exists</li>
+</ul>
+
+<h3 id="bug-fixes-15">Bug Fixes</h3>
+
+<ul>
+  <li>Fixed issue with UserConfiguration (config.xml) was invalid after overwriting  with custom values</li>
+  <li>MaxRequestLength extended to 100MB for large file upload</li>
+  <li>RequestLimit for IIS 7 extended to 100MB for large file upload</li>
+  <li>Fixed redirecting from Create actions</li>
+  <li>Fixed URL redirecting after Create and Delete actions</li>
+  <li>Favicon application error fixed</li>
+  <li>Fixed FormsAuthentication redirect call after basic authentication returns 401(and fire up runtime exception)</li>
+  <li>Fixed repository delete with read only files</li>
+</ul>
+
+
+            <hr />
+            <div class="footer">
+                <p class="text-center">&copy; <a href="http://chodounsky.net">Jakub Chodounsky</a> 2014  &middot; <a href="/privacy-policy/">Privacy Policy</a></p>
+            </div>
+      
+            <div class="ad ad-right">
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-5038943826605928" data-ad-slot="7444234903"></ins>				<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+           
+        </div>    
+
+        <script src="/resources/js/jquery-1.9.1.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+        <script src="/resources/js/prettify.js"></script>
+        <script src="/resources/js/lang-css.js"></script>
+        <script src="/resources/js/lang-lisp.js"></script>
+        <script src="/resources/js/lang-scala.js"></script>
+        <script src="/resources/js/lang-sql.js"></script>
+        <script src="/resources/js/lang-yaml.js"></script>
+        <script type="text/javascript" src="https://blockchain.info//Resources/wallet/pay-now-button.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40669399-1', 'bonobogitserver.com');
+            ga('send', 'pageview');
+
+            document.addEventListener('DOMContentLoaded',function() { prettyPrint(); });
+        </script>
+    </body>
+</html>

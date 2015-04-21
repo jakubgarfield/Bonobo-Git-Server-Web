@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>Bonobo Git Server - Install - Windows Authentication</title>
+        <meta name="author" content="Jakub Chodounsky">
+        <meta name="robots" content="all, follow">
+        <meta name="description" content="Setup windows authentication with Bonobo Git Server">
+        <meta name="keywords" content="Bonobo Git Server, Git Server for Windows, Open Source Git Server, Git, IIS Git, ASP .NET MVC, Install, Installation Guide, Quickstart, Windows Authentication, Git Windows Authentication">
+        <link rel="stylesheet" type="text/css"  href="/resources/css/bootstrap.css">   
+        <link rel="stylesheet" type="text/css"  href="/resources/css/default.css">
+        <link rel="stylesheet" type="text/css"  href="/resources/css/prettify.css">
+    </head>
+    <body>
+        <div class="container-narrow">
+            <div class="masthead">
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="/install/">Install</a></li>
+                    <li><a href="/screenshots/">Screenshots</a></li>
+                    <li><a href="/features/">Features</a></li>                    
+                    <li><a href="/documentation/">Documentation</a></li>
+                    <li><a href="/frequently-asked-questions/">Questions</a></li>
+                </ul>
+                <h3><a class="brand muted" href="/">Bonobo Git Server</a></h3>
+            </div>
+            <hr />
+            
+            <h1 id="windows-authentication">Windows Authentication</h1>
+
+<p>This authentication is very useful when your git server sits inside the company network and your accounts and logging information could be managed via IIS. The advantage of this approach is that your users won’t have to create another account for logging to Bonobo Git Server. They will use the existing Windows account they use on the network.</p>
+
+<p>The Windows Authentication is the hardest one to set up. It requires <strong>two instances</strong> of Bonobo Git Server running on the IIS. The first is used for handling git communication and the second one is used for the web interface. </p>
+
+<p><a href="/install/">Install</a> both application as if you would normally. Name the first one <strong>Bonobo.Git.Server</strong> and the second one <strong>Bonobo.Git.Server.Interface</strong> (it is not mandatory, but you have to be carefull during the further steps).</p>
+
+<p>If you want to access the web interface you are going to use the address <em>http://yourcompany.com/Bonobo.Git.Server.Interface</em> and for cloning your repository it is going to be <em>http://yourcompany.com/Bonobo.Git.Server/MyRepository.git</em>.</p>
+
+<h2 id="how-to-configure-bonobo-git-server">How to configure Bonobo Git Server?</h2>
+
+<p>You have to configure the first application (Bonobo.Git.Server) as it would be the <a href="/basic-authentication/">Basic Authentication</a> one. Set the values in the application <strong>web.config</strong> accordingly to the following lines.</p>
+
+<pre class="prettyprint"><code>&lt;appSettings&gt;
+    &lt;add key="ClientValidationEnabled" value="true" /&gt;
+    &lt;add key="UnobtrusiveJavaScriptEnabled" value="true" /&gt;
+    &lt;add key="UserConfiguration" value="~\App_Data\config.xml" /&gt;
+    &lt;add key="DefaultRepositoriesDirectory" value="~\App_Data\Repositories" /&gt;
+    &lt;add key="GitPath" value="~\App_Data\Git\git.exe" /&gt;
+    &lt;add key="ShouldImportWindowsUserAsAdministrator" value="true" /&gt;   
+&lt;/appSettings&gt;
+
+...
+
+&lt;connectionStrings&gt;    
+    &lt;add name="BonoboGitServerContext" connectionString="Data Source=|DataDirectory|Bonobo.Git.Server.db" providerName="System.Data.SQLite" /&gt;
+&lt;/connectionStrings&gt;
+
+...
+
+&lt;system.web&gt;
+    ...
+    &lt;authentication mode="Windows" /&gt;
+    ...
+&lt;/sytem.web&gt;
+</code></pre>
+
+<p>For the second one, Bonobo.Git.Server.Interface, let’s assume that you install the application to the standard C:\inetpub\wwwroot\ location. Otherwise change the values according to your location. The second web.config should look like this.</p>
+
+<pre class="prettyprint"><code>&lt;appSettings&gt;
+    &lt;add key="ClientValidationEnabled" value="true" /&gt;
+    &lt;add key="UnobtrusiveJavaScriptEnabled" value="true" /&gt;
+    &lt;add key="UserConfiguration" value="C:\inetpub\wwwroot\Bonobo.Git.Server\App_Data\config.xml" /&gt;
+    &lt;add key="DefaultRepositoriesDirectory" value="C:\inetpub\wwwroot\Bonobo.Git.Server\App_Data\Repositories" /&gt;
+    &lt;add key="GitPath" value="C:\inetpub\wwwroot\Bonobo.Git.Server\App_Data\Git\git.exe" /&gt;
+    &lt;add key="GitServerPath" value="http://localhost/Bonobo.Git.Server/" /&gt;
+    &lt;add key="ShouldImportWindowsUserAsAdministrator" value="true" /&gt;   
+&lt;/appSettings&gt;
+
+...
+
+&lt;connectionStrings&gt;    
+    &lt;add name="BonoboGitServerContext" connectionString="Data Source=C:\inetpub\wwwroot\Bonobo.Git.Server\App_Data\Bonobo.Git.Server.db" providerName="System.Data.SQLite" /&gt;
+&lt;/connectionStrings&gt;
+
+...
+
+&lt;system.web&gt;
+    ...
+    &lt;authentication mode="Windows" /&gt;
+    ...
+&lt;/sytem.web&gt;
+</code></pre>
+
+<p>As you might notice the values in this config file points to the first application. Therefore, one database and one folder is used to store repositories and database. </p>
+
+<p>The value <strong>GitServerPath</strong> is important for the UI and you should set it up to point at the first instance (eg. http://yourcompany.com/Bonobo.Git.Server).</p>
+
+<h2 id="how-to-configure-iis">How to configure IIS?</h2>
+
+<p>Enable <strong>Basic Authentication</strong> in IIS and disable the others for the first application. To do so, select the application, click on the authentication icon and set the value to of Basic Authentication to Enabled. The configuration should look like the following screenshot.</p>
+
+<p><img src="/resources/img/installation/iis_authentication_basic.png" alt="IIS enable basic authentication only" /></p>
+
+<p>For the second application enable <strong>Windows Authentication</strong> in IIS and disable the others for the first application.</p>
+
+<p><img src="/resources/img/installation/iis_authentication_windows.png" alt="IIS enable basic authentication only" /></p>
+
+<h2 id="keep-in-mind">Keep in mind</h2>
+
+<p>Git is authenticating to the server via Basic Authentication protocol and sends the password as a part of the request. If you want the communication to be safe you have to introduce SSL in your IIS. With the certificate your application will communicate over HTTPS and it will be encrypted.</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li><a href="/install/">Installation</a></li>
+  <li><a href="/web-config/">Web Configuration Documentation</a></li>
+</ul>
+
+
+            <hr />
+            <div class="footer">
+                <p class="text-center">&copy; <a href="http://chodounsky.net">Jakub Chodounsky</a> 2014  &middot; <a href="/privacy-policy/">Privacy Policy</a></p>
+            </div>
+      
+            <div class="ad ad-right">
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-5038943826605928" data-ad-slot="7444234903"></ins>				<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+           
+        </div>    
+
+        <script src="/resources/js/jquery-1.9.1.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+        <script src="/resources/js/prettify.js"></script>
+        <script src="/resources/js/lang-css.js"></script>
+        <script src="/resources/js/lang-lisp.js"></script>
+        <script src="/resources/js/lang-scala.js"></script>
+        <script src="/resources/js/lang-sql.js"></script>
+        <script src="/resources/js/lang-yaml.js"></script>
+        <script type="text/javascript" src="https://blockchain.info//Resources/wallet/pay-now-button.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40669399-1', 'bonobogitserver.com');
+            ga('send', 'pageview');
+
+            document.addEventListener('DOMContentLoaded',function() { prettyPrint(); });
+        </script>
+    </body>
+</html>

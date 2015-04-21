@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>Bonobo Git Server - FAQ</title>
+        <meta name="author" content="Jakub Chodounsky">
+        <meta name="robots" content="all, follow">
+        <meta name="description" content="This pages shows you how easy to install Bonobo Git Server is.">
+        <meta name="keywords" content="Bonobo Git Server, Git Server for Windows, Open Source Git Server, Git, IIS Git, ASP .NET MVC, FAQ, Question, Bonobo Git Server Questions, Frequently Asked Questions">
+        <link rel="stylesheet" type="text/css"  href="/resources/css/bootstrap.css">   
+        <link rel="stylesheet" type="text/css"  href="/resources/css/default.css">
+        <link rel="stylesheet" type="text/css"  href="/resources/css/prettify.css">
+    </head>
+    <body>
+        <div class="container-narrow">
+            <div class="masthead">
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="/install/">Install</a></li>
+                    <li><a href="/screenshots/">Screenshots</a></li>
+                    <li><a href="/features/">Features</a></li>                    
+                    <li><a href="/documentation/">Documentation</a></li>
+                    <li class="active"><a href="/frequently-asked-questions/">Questions</a></li>
+                </ul>
+                <h3><a class="brand muted" href="/">Bonobo Git Server</a></h3>
+            </div>
+            <hr />
+            
+            <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+
+<h4 id="how-to-support-bonobo-git-server">How to support Bonobo Git Server?</h4>
+
+<p>You can</p>
+
+<ul>
+  <li>contribute,</li>
+  <li>promote on your blog,</li>
+  <li>tweet about it,</li>
+  <li>answer a question on <a href="http://stackoverflow.com">StackOverflow</a>,</li>
+  <li>recommend it to your friend or colleague or</li>
+  <li>donate.</li>
+</ul>
+
+<div class="donations row-fluid">
+  <div class="paypal span3">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="text-center">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="LDBBJBMZX7FN2" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+  </div>
+  <div class="blockchain-btn span6" data-address="1NJUB7ZhsCSfz3p9VwwVgi7nPyByF3dhPP" data-shared="false">
+    <div class="blockchain stage-begin">
+        <img src="https://blockchain.info//Resources/buttons/donate_64.png" />
+    </div>
+    <div class="blockchain stage-loading" style="text-align:center">
+        <img src="https://blockchain.info//Resources/loading-large.gif" />
+    </div>
+    <div class="blockchain stage-ready">
+         <p align="center">Please Donate To Bitcoin Address: <b>[[address]]</b></p>
+         <p align="center" class="qr-code"></p>
+    </div>
+    <div class="blockchain stage-paid">
+         Donation of <b>[[value]] BTC</b> Received. Thank You.
+    </div>
+    <div class="blockchain stage-error">
+        <font color="red">[[error]]</font>
+    </div>
+  </div>
+  <div class="gittip span3">
+    <p><a href="https://www.gittip.com/jakubgarfield/"><img src="/resources/img/gittip.png" /></a></p>
+  </div>
+</div>
+
+<p>Thank you for using this project and your support.</p>
+
+<h4 id="how-to-clone-a-repository">How to clone a repository?</h4>
+
+<ul>
+  <li>Go to the <strong>Repository Detail</strong>.</li>
+  <li>Copy the value in the <strong>Git Repository Location</strong>.
+    <ul>
+      <li>It should look like <code>http://servername/projectname.git</code>.</li>
+    </ul>
+  </li>
+  <li>Go to your command line and run <code>git clone http://servername/projectname.git</code>.</li>
+</ul>
+
+<h4 id="how-do-i-change-my-password">How do I change my password?</h4>
+
+<ul>
+  <li>Click on the <strong>account settings</strong> in the top right corner.</li>
+  <li>Enter new password and confirmation.</li>
+  <li>Save.</li>
+</ul>
+
+<h4 id="how-to-backup-data">How to backup data?</h4>
+
+<ul>
+  <li>Go to the installation folder of Bonobo Git Server on the server.
+    <ul>
+      <li>Default location is <code>C:\inetpub\wwwroot\Bonobo.Git.Server</code>.</li>
+    </ul>
+  </li>
+  <li>Copy the content of App_Data folder to your backup directory.</li>
+  <li>If you changed the location of your repositories, backup them as well.</li>
+</ul>
+
+<h4 id="how-to-change-repositories-folder">How to change repositories folder?</h4>
+
+<ul>
+  <li>Log in as an administrator.</li>
+  <li>Go to <strong>Global Settings</strong>.</li>
+  <li>Set the desired value for the <strong>Repository Directory</strong>.
+    <ul>
+      <li>Directory must exist on the hard drive.</li>
+      <li>IIS User must have proper permissions to modify the folder.</li>
+    </ul>
+  </li>
+  <li>Save changes.</li>
+</ul>
+
+<h4 id="can-i-allow-anonymous-access-to-a-repository">Can I allow anonymous access to a repository?</h4>
+
+<ul>
+  <li>Edit the desired repository (or do this when creating the repository).</li>
+  <li>Check <strong>Anonymous</strong> check box.</li>
+  <li>Save.</li>
+</ul>
+
+<p>For allowing anonymous push you have to modify global settings.</p>
+
+<ul>
+  <li>Log in as an administrator.</li>
+  <li>Go to <strong>Global Settings</strong>.</li>
+  <li>Check the value <strong>Allow push for anonymous repositories</strong></li>
+  <li>Save changes.</li>
+</ul>
+
+<h4 id="fatal-http-inforefs-not-valid-is-this-a-git-repository">fatal: http: /info/refs not valid: is this a git repository?</h4>
+
+<p>This is a git client way of saying that it didn’t receive git stream as a response from a server. That usually means, that there has been an error on the server side.</p>
+
+<p>To determine what type of error it is, view the log file located at <code>App_Data/Bonobo.Git.Server.Errors.log</code>.</p>
+
+<h4 id="bonobo-git-server-doesnt-serve-css">Bonobo Git Server doesn’t serve CSS</h4>
+
+<p>This is a common issue for Windows 8 users, please see the <a href="http://forum.chodounsky.net/viewtopic.php?f=11&amp;t=252">topic</a>. The solution is simple:</p>
+
+<ul>
+  <li>Go to <strong>Turn windows features on or off</strong> screen</li>
+  <li>Navigate IS -&gt; WWWS -&gt; Common HTTP Features</li>
+  <li>Tick <strong>Static Content</strong></li>
+</ul>
+
+<h4 id="cloning-error---rpc-failed">Cloning Error - RPC failed</h4>
+
+<p>There are multiple reasons why this error can occure on the client, but the most frequent ones are related to the size of the request. If you encounter this issue try to increase the following values.</p>
+
+<ul>
+  <li>run <strong>git config http.postBuffer [desired size]</strong> on your client, you can try 524288000</li>
+  <li>increase <strong>&lt;requestLimits maxAllowedContentLength=”[desired size]”&gt;</strong> in web.config; the size could be 1073741824</li>
+  <li>increase <strong>&lt;httpRuntime maxRequestLength=”[desired size]”&gt;</strong> in web.config; try the value 1024000</li>
+</ul>
+
+<p>Apparently, there is no need in limiting maxRequestLength on IIS 8.0 so if you run into troubles, try to remove the line.</p>
+
+<h4 id="ssl-and-large-repositories">SSL and large repositories</h4>
+
+<p>When using SSL and pushing large repository you should increase the variable size as described above and if it still doesn’t help you should apply the following Microsoft patch (<a href="http://support.microsoft.com/kb/2634328/en-us">KB2634328</a>).</p>
+
+
+            <hr />
+            <div class="footer">
+                <p class="text-center">&copy; <a href="http://chodounsky.net">Jakub Chodounsky</a> 2014  &middot; <a href="/privacy-policy/">Privacy Policy</a></p>
+            </div>
+      
+            <div class="ad ad-right">
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-5038943826605928" data-ad-slot="7444234903"></ins>				<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+           
+        </div>    
+
+        <script src="/resources/js/jquery-1.9.1.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+        <script src="/resources/js/prettify.js"></script>
+        <script src="/resources/js/lang-css.js"></script>
+        <script src="/resources/js/lang-lisp.js"></script>
+        <script src="/resources/js/lang-scala.js"></script>
+        <script src="/resources/js/lang-sql.js"></script>
+        <script src="/resources/js/lang-yaml.js"></script>
+        <script type="text/javascript" src="https://blockchain.info//Resources/wallet/pay-now-button.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40669399-1', 'bonobogitserver.com');
+            ga('send', 'pageview');
+
+            document.addEventListener('DOMContentLoaded',function() { prettyPrint(); });
+        </script>
+    </body>
+</html>
