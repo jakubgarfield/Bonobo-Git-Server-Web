@@ -123,3 +123,12 @@ Apparently, there is no need in limiting maxRequestLength on IIS 8.0 so if you r
 #### SSL and large repositories
 
 When using SSL and pushing large repository you should increase the variable size as described above and if it still doesn't help you should apply the following Microsoft patch ([KB2634328](http://support.microsoft.com/kb/2634328/en-us)).
+
+#### Error 500.19 and file execution issues and locked on IIS 8
+
+To resolve it I had to execute:
+
+~~~
+%windir%\system32\inetsrv\appcmd unlock config -section:system.webServer/handlers
+%windir%\system32\inetsrv\appcmd unlock config -section:system.webServer/modules
+~~~
