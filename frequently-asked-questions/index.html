@@ -170,6 +170,14 @@
 
 <p>When using SSL and pushing large repository you should increase the variable size as described above and if it still doesn’t help you should apply the following Microsoft patch (<a href="http://support.microsoft.com/kb/2634328/en-us">KB2634328</a>).</p>
 
+<h4 id="error-50019-and-file-execution-issues-and-locked-on-iis-8">Error 500.19 and file execution issues and locked on IIS 8</h4>
+
+<p>To resolve it I had to execute:</p>
+
+<pre><code>%windir%\system32\inetsrv\appcmd unlock config -section:system.webServer/handlers
+%windir%\system32\inetsrv\appcmd unlock config -section:system.webServer/modules
+</code></pre>
+
 
             <hr />
             <div class="footer">
