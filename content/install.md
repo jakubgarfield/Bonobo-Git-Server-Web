@@ -18,8 +18,8 @@ The following steps covers an installation with Windows 2008 Server and IIS 7. T
 
 * **Allow IIS User to modify** `C:\inetpub\wwwroot\Bonobo.Git.Server\App_Data` folder. To do so
     * select Properties of App_Data folder,
-    * go to Security tab, 
-    * click edit, 
+    * go to Security tab,
+    * click edit,
     * select IIS user (in my case IIS_IUSRS) and add Modify and Write permission,
     * confirm these settings with Apply button.
 

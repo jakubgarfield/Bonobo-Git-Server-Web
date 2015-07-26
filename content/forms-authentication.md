@@ -23,12 +23,12 @@ The default settings should be already configured for this mode. If it, for any 
     <add key="UserConfiguration" value="~\App_Data\config.xml" />
     <add key="DefaultRepositoriesDirectory" value="~\App_Data\Repositories" />
     <add key="GitPath" value="~\App_Data\Git\git.exe" />
-    <add key="ShouldImportWindowsUserAsAdministrator" value="false" />   
+    <add key="ShouldImportWindowsUserAsAdministrator" value="false" />
 </appSettings>
 
 ...
 
-<connectionStrings>    
+<connectionStrings>
     <add name="BonoboGitServerContext" connectionString="Data Source=|DataDirectory|Bonobo.Git.Server.db" providerName="System.Data.SQLite" />
 </connectionStrings>
 
