@@ -28,3 +28,6 @@ DEPENDENCIES
   nanoc
   rainpress
   stringex
+
+BUNDLED WITH
+   1.10.2
