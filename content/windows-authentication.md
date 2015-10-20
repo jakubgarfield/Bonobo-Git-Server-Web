@@ -15,7 +15,7 @@ So if you are using Windows Authentication, you should consider switching to the
 
 ## How to configure Bonobo Git Server?
 
-Set the AuthenticationProvider and authentication mode values in the application **web.config** according to the following lines.
+Set the AuthenticationProvider value in the application **web.config** according to the following lines.
 
 ~~~
 <appSettings>
