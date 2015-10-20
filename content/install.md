@@ -32,16 +32,33 @@ The following steps covers an installation with Windows 2008 Server and IIS 7. T
 
 ![Convert to a web application](/resources/img/installation/install_iis7_iis2.png)
 
+* **Configure Authentication**
+
+Enable **Anonymous Authentication** in IIS and disable the others. To do so, select the application, click on the authentication icon and set the value to of Anonymous Authentication to Enabled. The configuration should look like the following screenshot.
+
+![IIS enable Anonymous Authentication only](/resources/img/installation/iis_authentication_forms.png)
+
+
 
 * **Launch your browser** and go to [http://localhost/Bonobo.Git.Server](http://localhost/Bonobo.Git.Server). Now you can see the initial page of Bonobo Git Server and everything is working.
     * Default credentials are username: **admin** password: **admin**
 
 ![Launch browser and sign in](/resources/img/installation/install_iis7_git.png)
 
-Bonobo Git Server is configured to use [forms authentication](/forms-authentication/). If you want to change it follow up instruction on the following sites.
+The authentication and membership service functions have been split up into separate configurable modules in the latest version of Bonobo Git Server.  By default, it is configured to use [Cookie Authentication](/cookie-authentication/) and the [Internal Membership Service](/ef-membership/). 
+Please follow up on how to use the different methods using the following sites. 
 
-* [Forms Authentication](/forms-authentication/)
+### Authentication Providers
+
+* [Cookie Authentication](/cookie-authentication/)
 * [Windows Authentication](/windows-authentication/)
-* [Basic Authentication](/basic-authentication/)
+* [Federation Authentication](/federation-authentication/)
+
+### Membership Services
+
+* [Internal Membership Service](/ef-membership/)
+* [Active Directory Membership Service](/ad-membership/)
+
+If you are have a previous version installed, you should review [these migration notes](/migration-notes/).
 
 If you have any issues with the installation try to search [FAQ](/frequently-asked-questions/) and [forum](https://groups.google.com/forum/#!forum/bonobo-git-server).

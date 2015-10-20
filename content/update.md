@@ -12,3 +12,4 @@ Before each update please read carefully the information about **compatibility i
 * Delete all the files in the installation folder **except App_Data**.
     * Default location is `C:\inetpub\wwwroot\Bonobo.Git.Server`.
 * Copy the files from the downloaded archive to the server location.
+* Review the [migration notes](/migration-notes/).

@@ -11,33 +11,32 @@ Bonobo Git Server for Windows is a web application you can install on your IIS. 
 
 ### Access Control
 
-* manage access to your repositories 
-* teams/groups support
-* handy user management
+* Manage access to your repositories 
+* Teams/groups support
+* Handy user management
 
 ### Nice UI
 
-* beautiful modern design
-* focused on great user experience
-* functional
+* Beautiful modern design
+* Focused on great user experience
+* Functional
 
 ### Repository Browser
 
-* nice way to browse your project
-* available for every commit and file in history
-* very fast
+* Nice way to browse your project
+* Available for every commit and file in history
+* Very fast
 
 ### Commit Browser
 
-* view your history
-* sweet diff for files
-* browse the content
+* View your history
+* Sweet diff for files
+* Browse the content
 
-### Windows Authentication
+### Optional Active Directory Integration
 
-* setup it with your IIS user management
-* Windows and Basic authentication modes support
-* use Active Directory with git to manage your access
+* Setup users, teams and roles using the standard Active Directory users tool
+* Windows, Cookies and ADFS authentication mode support
 
 ### Localization
 

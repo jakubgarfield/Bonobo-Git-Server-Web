@@ -1,4 +1,4 @@
-﻿---
+---
 title: Changelog
 description: Tracks changes and bug fixes between different versions of Bonobo Git Server for Windows
 tags: [Changelog, Changes, Bug Fixes, Features]

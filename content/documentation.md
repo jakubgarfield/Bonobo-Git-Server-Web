@@ -11,9 +11,11 @@ Contains links to all the resources for installing, updating and configuring Bon
 
 * [Installation Guide](/install/)
     * [Prerequisites](/prerequisites/)
-    * [Forms Authentication](/forms-authentication/)
-    * [Basic Authentication](/basic-authentication/)
+    * [Cookie Authentication](/cookie-authentication/)
     * [Windows Authentication](/windows-authentication/)
+    * [Federation Authentication](/federation-authentication/)
+    * [Internal Membership Service](/ef-membership/)
+    * [Active Directory Membership Service](/ad-membership/) 
     * [Web.Config Documentation](/web-config/)
 * [Update](/update/)
 * [Compatibility](/compatibility/)
