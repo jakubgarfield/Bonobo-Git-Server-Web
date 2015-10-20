@@ -11,7 +11,7 @@ This method provides a classic login form, prompting users to enter their userna
 
 ## How to configure Bonobo Git Server?
 
-In order to use the Cookie Authentication Provider, change the AuthenticationProvider and authentication mode values  in the **web.config** file located in the root of the application according to the following lines.
+In order to use the Cookie Authentication Provider, change the AuthenticationProvider value in the **web.config** file located in the root of the application according to the following lines.
 
 ~~~
 <appSettings>
