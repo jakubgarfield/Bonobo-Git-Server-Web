@@ -4,6 +4,32 @@ description: Tracks changes and bug fixes between different versions of Bonobo G
 tags: [Changelog, Changes, Bug Fixes, Features]
 ---
 
+## Version 5.0.0
+
+** 22 October 2015
+
+This is a major release as Ollienator simplified and consolidated authorization and also added new providers, but your current web.config could be out of date and might need an update. Check out the new docs and update your web.config accordingly.
+
+### Features
+
+* major rework of authentication and authorization - ollienator
+* simplification of Active Directory integration (no need to run 2 servers) - ollienator
+* authentication through OWIN and ADFS - ollienator
+* updated nuget packages and libgit2sharp - amonomen
+* client based culture and brazil translation - darioajr
+* msysgit update 1.9.5 - larshg
+* remove origin branch after cloning - latop2604
+* allow relative repository path - lhko
+* better error handling - matt-17
+
+### Bug fixes
+
+* improved detection of windows-1252 encoding - larshg
+* fix typo errors - isaksson
+* using UI date time format - crowar
+* fix compile error:x64/SQLite.Interop.dll not found - myh
+
+
 ## Version 4.0.0
 
 ** 11 Jun 2015
