@@ -6,7 +6,7 @@ tags: [Changelog, Changes, Bug Fixes, Features]
 
 ## Version 5.0.0
 
-** 22 October 2015
+**22 October 2015**
 
 This is a major release as Ollienator simplified and consolidated authorization and also added new providers, but your current web.config could be out of date and might need an update. Check out the new docs and update your web.config accordingly.
 
@@ -32,7 +32,7 @@ This is a major release as Ollienator simplified and consolidated authorization 
 
 ## Version 4.0.0
 
-** 11 Jun 2015
+**11 Jun 2015**
 
 ### Features
 
@@ -54,7 +54,7 @@ This is a major release as Ollienator simplified and consolidated authorization 
 
 ## Version 3.6.0
 
-**2 Apr 2015
+**2 Apr 2015**
 
 ### Features
 
