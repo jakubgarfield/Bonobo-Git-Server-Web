@@ -48,7 +48,7 @@ Bonobo Git Server for Windows is a web application you can install on your IIS. 
 Demo
 ===================================
 
-I created a simple demo running on Windows Azure virtual machine. You can find it [here](http://bonobo-git-server.cloudapp.net/).
+I created a simple demo running on Windows Azure virtual machine. You can find it [here](http://demo.bonobogitserver.com/).
 
 The username and password is **admin:admin**. 
 
