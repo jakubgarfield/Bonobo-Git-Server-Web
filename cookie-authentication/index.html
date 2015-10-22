@@ -26,45 +26,20 @@
             </div>
             <hr />
 
-            <h1 id="forms-authentication">Forms Authentication</h1>
+            <h1 id="cookie-authentication">Cookie Authentication</h1>
 
-<p>This method should be used when you don’t want your Internet Information Services to handle the authentication. Therefore, use it when you want to keep the users separated from the Windows Authentication process or you don’t have it configured at all.</p>
-
-<p>You want to use this mode when you handle connection from outside your network—keep in mind though that with VPN you can use Windows Authentication as well. Also, forms authentication was the only mode available in Bonobo Git Server until version 2.0.</p>
+<p>This method provides a classic login form, prompting users to enter their username and password.  Once users are authenticated, the server will use an authentication cookie to validate access.</p>
 
 <h2 id="how-to-configure-bonobo-git-server">How to configure Bonobo Git Server?</h2>
 
-<p>The default settings should be already configured for this mode. If it, for any reason, isn’t so, you should simply change few values in the <strong>web.config</strong> file located in the root of the application.</p>
+<p>In order to use the Cookie Authentication Provider, change the AuthenticationProvider value in the <strong>web.config</strong> file located in the root of the application according to the following lines.</p>
 
 <pre class="prettyprint"><code>&lt;appSettings&gt;
-    &lt;add key="ClientValidationEnabled" value="true" /&gt;
-    &lt;add key="UnobtrusiveJavaScriptEnabled" value="true" /&gt;
-    &lt;add key="UserConfiguration" value="~\App_Data\config.xml" /&gt;
-    &lt;add key="DefaultRepositoriesDirectory" value="~\App_Data\Repositories" /&gt;
-    &lt;add key="GitPath" value="~\App_Data\Git\git.exe" /&gt;
-    &lt;add key="ShouldImportWindowsUserAsAdministrator" value="false" /&gt;
+    ...
+    &lt;add key="AuthenticationProvider" value="Cookies" /&gt;
+    ...
 &lt;/appSettings&gt;
-
-...
-
-&lt;connectionStrings&gt;
-    &lt;add name="BonoboGitServerContext" connectionString="Data Source=|DataDirectory|Bonobo.Git.Server.db" providerName="System.Data.SQLite" /&gt;
-&lt;/connectionStrings&gt;
-
-...
-
-&lt;system.web&gt;
-    ...
-    &lt;authentication mode="None" /&gt;
-    ...
-&lt;/sytem.web&gt;
 </code></pre>
-
-<h2 id="how-to-configure-iis">How to configure IIS?</h2>
-
-<p>Enable <strong>Anonymous Authentication</strong> in IIS and disable the others. To do so, select the application, click on the authentication icon and set the value to of Anonymous Authentication to Enabled. The configuration should look like the following screenshot.</p>
-
-<p><img src="/resources/img/installation/iis_authentication_forms.png" alt="IIS enable Anonymous Authentication only" /></p>
 
 <h2 id="keep-in-mind">Keep in mind</h2>
 

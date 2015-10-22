@@ -66,6 +66,14 @@
 <p><img src="/resources/img/installation/install_iis7_iis2.png" alt="Convert to a web application" /></p>
 
 <ul>
+  <li><strong>Configure Authentication</strong></li>
+</ul>
+
+<p>Enable <strong>Anonymous Authentication</strong> in IIS and disable the others. To do so, select the application, click on the authentication icon and set the value to of Anonymous Authentication to Enabled. The configuration should look like the following screenshot.</p>
+
+<p><img src="/resources/img/installation/iis_authentication_forms.png" alt="IIS enable Anonymous Authentication only" /></p>
+
+<ul>
   <li><strong>Launch your browser</strong> and go to <a href="http://localhost/Bonobo.Git.Server">http://localhost/Bonobo.Git.Server</a>. Now you can see the initial page of Bonobo Git Server and everything is working.
     <ul>
       <li>Default credentials are username: <strong>admin</strong> password: <strong>admin</strong></li>
@@ -75,13 +83,25 @@
 
 <p><img src="/resources/img/installation/install_iis7_git.png" alt="Launch browser and sign in" /></p>
 
-<p>Bonobo Git Server is configured to use <a href="/forms-authentication/">forms authentication</a>. If you want to change it follow up instruction on the following sites.</p>
+<p>The authentication and membership service functions have been split up into separate configurable modules in the latest version of Bonobo Git Server.  By default, it is configured to use <a href="/cookie-authentication/">Cookie Authentication</a> and the <a href="/ef-membership/">Internal Membership Service</a>. 
+Please follow up on how to use the different methods using the following sites. </p>
+
+<h3 id="authentication-providers">Authentication Providers</h3>
 
 <ul>
-  <li><a href="/forms-authentication/">Forms Authentication</a></li>
+  <li><a href="/cookie-authentication/">Cookie Authentication</a></li>
   <li><a href="/windows-authentication/">Windows Authentication</a></li>
-  <li><a href="/basic-authentication/">Basic Authentication</a></li>
+  <li><a href="/federation-authentication/">Federation Authentication</a></li>
 </ul>
+
+<h3 id="membership-services">Membership Services</h3>
+
+<ul>
+  <li><a href="/ef-membership/">Internal Membership Service</a></li>
+  <li><a href="/ad-membership/">Active Directory Membership Service</a></li>
+</ul>
+
+<p>If you are have a previous version installed, you should review <a href="/migration-notes/">these migration notes</a>.</p>
 
 <p>If you have any issues with the installation try to search <a href="/frequently-asked-questions/">FAQ</a> and <a href="https://groups.google.com/forum/#!forum/bonobo-git-server">forum</a>.</p>
 

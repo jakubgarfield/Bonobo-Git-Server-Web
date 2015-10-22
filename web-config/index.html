@@ -39,10 +39,6 @@
   <dd>Path to the folder where git repositories are stored.</dd>
   <dt>GitPath</dt>
   <dd>Path to git executables to handle communication</dd>
-  <dt>GitServerPath</dt>
-  <dd>Value used by the second instance with <a href="/windows-authentication/">Windows Authentication</a> setup. It is used in UI to show the path of git repositories on the first instance.</dd>
-  <dt>ShouldImportWindowsUserAsAdministrator</dt>
-  <dd>When Basic or Windows authentication is used and new user connects to the server, when he is imported the role Administrator can be assigned to him if this value is set to true.</dd>
 </dl>
 
 <h2 id="connectionstrings">connectionStrings</h2>
@@ -50,13 +46,6 @@
 <dl>
   <dt>BonoboGitServerContext</dt>
   <dd>Path to the Bonobo Git Server database.</dd>
-</dl>
-
-<h2 id="systemweb">system.web</h2>
-
-<dl>
-  <dt>authentication mode=”value”</dt>
-  <dd><a href="/forms-authentication/">Forms authentication</a> uses None otherwise it should be set to Windows for <a href="/basic-authentication/">Basic</a> and <a href="/windows-authentication/">Windows</a> Authentication setup.</dd>
 </dl>
 
 

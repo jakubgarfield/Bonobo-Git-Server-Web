@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bonobo Git Server - Install - Basic Authentication</title>
+        <title>Bonobo Git Server - Install - Federation Authentication</title>
         <meta name="author" content="Jakub Chodounsky">
         <meta name="robots" content="all, follow">
-        <meta name="description" content="Setup windows authentication with Bonobo Git Server">
-        <meta name="keywords" content="Bonobo Git Server, Git Server for Windows, Open Source Git Server, Git, IIS Git, ASP .NET MVC, Install, Installation Guide, Quickstart, Basic Authentication">
+        <meta name="description" content="Setup ADFS authentication with Bonobo Git Server">
+        <meta name="keywords" content="Bonobo Git Server, Git Server for Windows, Open Source Git Server, Git, IIS Git, ASP .NET MVC, Install, Installation Guide, Quickstart, Federation Authentication, ADFS">
         <link rel="stylesheet" type="text/css"  href="/resources/css/bootstrap.css">
         <link rel="stylesheet" type="text/css"  href="/resources/css/default.css">
         <link rel="stylesheet" type="text/css"  href="/resources/css/prettify.css">
@@ -26,45 +26,33 @@
             </div>
             <hr />
 
-            <h1 id="basic-authentication">Basic Authentication</h1>
+            <h1 id="federation-authentication">Federation Authentication</h1>
 
-<p>Use Basic Authentication if you want your IIS handle the authentication process. The advantage against <a href="/windows-authentication/">Windows Authentication</a> is that you don’t have to install two instances of Bonobo Git Server. Only one instance is running and users are connecting to it with git and web interface as well.</p>
+<p>This authentication method uses an ADFS server to authenticate access to Bonobo Git.  The main benefit of using this method is that it is providing single-sign-on capabilities across all of your web sites, if the other sites support federation authentication as well.  </p>
 
-<p>The configuration is very easy but you are losing some comfort of Windows Authentication on the web interface.</p>
+<h2 id="how-to-configure-adfs">How to configure ADFS?</h2>
+
+<p>Setting up an ADFS server is beyond the scope of this page, but there are a lot of articles you can read on <a href="https://technet.microsoft.com/en-us/library/cc772128%28v=ws.10%29.aspx">TechNet</a>.</p>
+
+<p>You will need to get the <em>metadata address</em> and <em>realm</em> for the trust you created in the ADFS configuration tool in order to configure Bonobo Git. No special claims will have to be issued, as the claims are internally handled by the <a href="/ad-membership/">Active Directory Membership Service</a>. </p>
 
 <h2 id="how-to-configure-bonobo-git-server">How to configure Bonobo Git Server?</h2>
 
-<p>Set the values in the application <strong>web.config</strong> according to the following lines.</p>
+<p>Set up the <a href="/ad-membership/">Active Directory Membership Service</a>.</p>
+
+<p>Set the AuthenticationProvider in the application <strong>web.config</strong> according to the following lines.</p>
 
 <pre class="prettyprint"><code>&lt;appSettings&gt;
-    &lt;add key="ClientValidationEnabled" value="true" /&gt;
-    &lt;add key="UnobtrusiveJavaScriptEnabled" value="true" /&gt;
-    &lt;add key="UserConfiguration" value="~\App_Data\config.xml" /&gt;
-    &lt;add key="DefaultRepositoriesDirectory" value="~\App_Data\Repositories" /&gt;
-    &lt;add key="GitPath" value="~\App_Data\Git\git.exe" /&gt;
-    &lt;add key="ShouldImportWindowsUserAsAdministrator" value="true" /&gt;   
+    ...
+    &lt;add key="AuthenticationProvider" value="Federation" /&gt;
+    &lt;add key="MembershipService" value="ActiveDirectory" /&gt;
+    &lt;add key="FederationMetadataAddress" value="https://sts.domain.local/federationmetadata/2007-06/federationmetadata.xml" /&gt;
+    &lt;add key="FederationRealm" value="https://git.domain.local" /&gt;
+    ...
 &lt;/appSettings&gt;
-
-...
-
-&lt;connectionStrings&gt;    
-    &lt;add name="BonoboGitServerContext" connectionString="Data Source=|DataDirectory|Bonobo.Git.Server.db" providerName="System.Data.SQLite" /&gt;
-&lt;/connectionStrings&gt;
-
-...
-
-&lt;system.web&gt;
-    ...
-    &lt;authentication mode="Windows" /&gt;
-    ...
-&lt;/sytem.web&gt;
 </code></pre>
 
-<h2 id="how-to-configure-iis">How to configure IIS?</h2>
-
-<p>Enable <strong>Basic Authentication</strong> in IIS and disable the others. To do so, select the application, click on the authentication icon and set the value to of Basic Authentication to Enabled. The configuration should look like the following screenshot.</p>
-
-<p><img src="/resources/img/installation/iis_authentication_basic.png" alt="IIS enable basic authentication only" /></p>
+<p>Replace the <em>FederationMetadataAddress</em> and <em>FederationRealm</em> values with the ones you configured using the ADFS configuration tool.</p>
 
 <h2 id="keep-in-mind">Keep in mind</h2>
 

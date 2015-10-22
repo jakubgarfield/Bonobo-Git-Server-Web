@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bonobo Git Server - Git Server for Windows</title>
+        <title>Bonobo Git Server - Install - Migration Notes</title>
         <meta name="author" content="Jakub Chodounsky">
         <meta name="robots" content="all, follow">
-        <meta name="description" content="">
-        <meta name="keywords" content="Bonobo Git Server, Git Server for Windows, Open Source Git Server, Git, IIS Git, ASP .NET MVC, ">
+        <meta name="description" content="Migration notes for previous installations">
+        <meta name="keywords" content="Bonobo Git Server, Git Server for Windows, Open Source Git Server, Git, IIS Git, ASP .NET MVC, Install, Installation Guide, Quickstart, Migration notes">
         <link rel="stylesheet" type="text/css"  href="/resources/css/bootstrap.css">
         <link rel="stylesheet" type="text/css"  href="/resources/css/default.css">
         <link rel="stylesheet" type="text/css"  href="/resources/css/prettify.css">
@@ -26,40 +26,15 @@
             </div>
             <hr />
 
-            <div class="jumbotron">
-    <h1>Simple git server for Windows.</h1>
-    <p class="lead">Set up your own self hosted git server on <abbr title="Internet Information Services">IIS</abbr> for Windows. Manage users and have full control over your repositories with a nice user friendly graphical interface.</p>
+            <h1 id="migration-notes">Migration Notes</h1>
 
-    <a class="btn btn-large btn-success" href="https://jakubgarfield.blob.core.windows.net/bonobo/Bonobo.Git.Server.5.0.0.zip"><i class="icon-download icon-white"></i> Download 5.0.0</a>
-    <p class="muted"><small>See the <a href="/changelog/">changelog</a></small></p>
+<p>Due to the recent changes made to the authentication mechanism, please note the following.</p>
 
-    <div class="ad-center">
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5038943826605928" data-ad-slot="5827900901"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-</div>
+<ol>
+  <li>Make sure you check your existing <em>web.config</em> uses <strong>authentication mode “<em>None</em>“</strong> for all use cases. Also verify that <em>Anonymous Authentication</em> is the only Authentication setting enabled on your Bonobo Git site.  Internal IIS authentication has been completely removed and the new authentication pipeline expects initial requests to be anonymous.</li>
+  <li>If you had <strong>windows authentication</strong> set up according to the previous guide, remove the two separate sites in IIS after backing up the AppData folder and follow the installation instructions in this guide to set up a single site.  The new windows authentication provider will automatically switch between windows authentication for web requests and basic authentication for git access.</li>
+</ol>
 
-<div class="row-fluid">
-    <div class="span4">
-        <h2>Simple</h2>
-        <p>The <a href="/install/">installation</a> is very easy and you can manage everything from a nice and clean <a href="/screenshots/">graphical interface</a>.</p>
-        <p>You can use your current Windows infrastructure and Bonobo Git Server runs on your IIS.</p>
-        <p>See the <a href="/features/">demo and features</a>.</p>
-    </div>
-    <div class="span4">
-        <h2>Open</h2>
-        <p>Bonobo Git Server is an open-source project as it is licensed with a <a href="https://github.com/jakubgarfield/Bonobo-Git-Server/blob/master/license.md">MIT License</a>.</p>
-        <p>The source code is available on <a href="https://github.com/jakubgarfield/Bonobo-Git-Server">github</a> and is very extensible — you can influence its future.</p>
-        <p>Contribute and make your feature part of the best git server for Windows.</p>
-    </div>
-    <div class="span4">
-        <h2>Free</h2>
-        <p>Bonobo Git Server is a free git server for Windows and it should stay free.</p>
-        <p>However, you can still <a href="/frequently-asked-questions/">support the project</a> in multiple ways.</p>
-        <p><a href="mailto:&#106;&#097;&#107;&#117;&#098;&#046;&#099;&#104;&#111;&#100;&#111;&#117;&#110;&#115;&#107;&#121;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Let me know</a> if you have any question or idea.</p>
-    </div>
-</div>
 
             <hr />
             <div class="footer">
