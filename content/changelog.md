@@ -4,6 +4,23 @@ description: Tracks changes and bug fixes between different versions of Bonobo G
 tags: [Changelog, Changes, Bug Fixes, Features]
 ---
 
+## Version 5.0.1
+
+**5 November 2015**
+
+## Features
+
+* add go to repository after creation - erdemyavuzyildiz
+
+## Fixes
+
+* ADRepository username handling - larshg
+* cookie authentication issue fix - bogusz
+* don't strip domain in AD membership service - larshg
+* fix teams and AD - larshg
+* fix team deletation - BurhanEyimaya
+
+
 ## Version 5.0.0
 
 **22 October 2015**
