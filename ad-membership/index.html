@@ -55,15 +55,17 @@ Users, teams and roles are managed using the standard Active Directory Users and
 &lt;/appSettings&gt;
 </code></pre>
 
-<p>Replace the <em>ActiveDirectoryDefaultDomain</em> with the name of the domain you will be authenticating against.  </p>
+<p>Replace the <em>ActiveDirectoryDefaultDomain</em> with the name of the domain you will be authenticating against.</p>
 
-<p>Next, set the <em>ActiveDirectoryMemberGroupName</em> to the name of the members group you created earlier.   </p>
+<p>Next, set the <em>ActiveDirectoryMemberGroupName</em> to the name of the members group you created earlier.</p>
 
-<p>Finally, set up the Active Directory group name to team name and role name mappings in <em>ActiveDirectoryTeamMapping</em> and <em>ActiveDirectoryRoleMapping</em>.  In the example configuration above, two teams are created (<em>Team1</em> and <em>Team2</em>), whose members will be taken from the AD groups named <em>GitTeam1</em> and <em>GitTeam2</em>, respectively. </p>
+<p>Finally, set up the Active Directory group name to team name and role name mappings in <em>ActiveDirectoryTeamMapping</em> and <em>ActiveDirectoryRoleMapping</em>.  In the example configuration above, two teams are created (<em>Team1</em> and <em>Team2</em>), whose members will be taken from the AD groups named <em>GitTeam1</em> and <em>GitTeam2</em>, respectively.</p>
 
-<p>That’s it, you’re all set.  If you ever need to add or remove users from roles or teams, just use Active Directory Users and Computers to add or remove the corresponding users from the AD groups.  The changes in Active Directory are applied to Bonobo Git Server automatically.  </p>
+<p>That’s it, you’re all set.  If you ever need to add or remove users from roles or teams, just use Active Directory Users and Computers to add or remove the corresponding users from the AD groups.  The changes in Active Directory are applied to Bonobo Git Server automatically.</p>
 
 <p>If you add or remove teams using Active Directory later, don’t forget to also adjust <em>ActiveDirectoryTeamMapping</em> in the web.config.</p>
+
+<p>Make sure that your application pool identity has an access to your Active Directory – set it properly or change it to Network Service.</p>
 
 
             <hr />
