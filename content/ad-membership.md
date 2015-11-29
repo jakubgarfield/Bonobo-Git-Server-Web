@@ -36,12 +36,14 @@ In order to use the Active Directory Membership Service, change the *MembershipS
 ~~~
 {: .prettyprint}
 
-Replace the *ActiveDirectoryDefaultDomain* with the name of the domain you will be authenticating against.  
+Replace the *ActiveDirectoryDefaultDomain* with the name of the domain you will be authenticating against.
 
-Next, set the *ActiveDirectoryMemberGroupName* to the name of the members group you created earlier.   
+Next, set the *ActiveDirectoryMemberGroupName* to the name of the members group you created earlier.
 
-Finally, set up the Active Directory group name to team name and role name mappings in *ActiveDirectoryTeamMapping* and *ActiveDirectoryRoleMapping*.  In the example configuration above, two teams are created (*Team1* and *Team2*), whose members will be taken from the AD groups named *GitTeam1* and *GitTeam2*, respectively. 
+Finally, set up the Active Directory group name to team name and role name mappings in *ActiveDirectoryTeamMapping* and *ActiveDirectoryRoleMapping*.  In the example configuration above, two teams are created (*Team1* and *Team2*), whose members will be taken from the AD groups named *GitTeam1* and *GitTeam2*, respectively.
 
-That's it, you're all set.  If you ever need to add or remove users from roles or teams, just use Active Directory Users and Computers to add or remove the corresponding users from the AD groups.  The changes in Active Directory are applied to Bonobo Git Server automatically.  
+That's it, you're all set.  If you ever need to add or remove users from roles or teams, just use Active Directory Users and Computers to add or remove the corresponding users from the AD groups.  The changes in Active Directory are applied to Bonobo Git Server automatically.
 
 If you add or remove teams using Active Directory later, don't forget to also adjust *ActiveDirectoryTeamMapping* in the web.config.
+
+Make sure that your application pool identity has an access to your Active Directory -- set it properly or change it to Network Service.
