@@ -28,6 +28,7 @@ Set the AuthenticationProvider value in the application **web.config** according
 
 Git is authenticating to the server via Basic Authentication protocol and sends the password as a part of the request. If you want the communication to be safe you have to introduce SSL in your IIS. With the certificate your application will communicate over HTTPS and it will be encrypted.
 
+Make sure that your application pool identity has an access to your Active Directory -- set it properly or change it to Network Service.
 
 ## Links
 
