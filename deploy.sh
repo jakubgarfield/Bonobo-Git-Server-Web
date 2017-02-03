@@ -10,8 +10,8 @@ git add .
 git commit -m "$1"
 git push origin master
 
-be nanoc
-be nanoc prune --yes
+bundle exec nanoc
+bundle exec nanoc prune --yes
 
 cd output
 git add .
