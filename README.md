@@ -13,7 +13,7 @@ So you have the following structure:
 
 ## Installation
 
-You need to have a ruby installed -- version 2.2.5. For Windows use [RubyInstaller](https://rubyinstaller.org/). For UNIX I recommend using [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build).
+You need to have a ruby installed -- version 2.2.6. For Windows use [RubyInstaller](https://rubyinstaller.org/). For UNIX I recommend using [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build).
 
 
 
@@ -26,9 +26,9 @@ gem install bundler
 Next thing is cloning the project and it's gh-pages branch.
 
 ~~~
-git clone git@github.com:jakubgarfield/Bonobo-Git-Server-Web.git
+git clone https://github.com/jakubgarfield/Bonobo-Git-Server-Web.git
 cd Bonobo-Git-Server-Web
-git clone --depth 1 git@github.com:jakubgarfield/Bonobo-Git-Server-Web.git output
+git clone --depth 1 https://github.com/jakubgarfield/Bonobo-Git-Server-Web.git -b "gh-pages" output
 ~~~
 
 In ruby the dependencies are called ruby gems (stored in Gemfile) and installed with [bundler](http://bundler.io/). In the project directory run the following:
