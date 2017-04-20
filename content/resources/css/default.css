@@ -1,4 +1,4 @@
-body { padding-top: 20px; padding-bottom: 40px; }
+body { padding-bottom: 40px; }
 .container-narrow { margin: 0 auto; width: 800px; }
 .container-narrow > hr { margin: 30px 0; }
 .jumbotron { margin: 60px 0 45px 0; text-align: center; }
@@ -26,6 +26,11 @@ h3 a.brand:hover  { text-decoration: none; }
 .ad { position: absolute; width: 160px; top: 40px;}
 .ad-right { margin-left: 840px; }
 .ad-center { margin-top: 1.5em;}
+
+.newsletter-signup { width: 100%; text-align: center; background: #f2f2f2; margin-bottom: 1em; line-height: 50px; }
+.
+.newsletter-signup input[type="submit"] { background: #e85c41; }
+.newsletter-signup input[type="submit"]:hover { background: #db3a1b; }
 
 @media (max-width: 800px) {
   .ad { display: none; }
