@@ -26,7 +26,89 @@
             </div>
             <hr />
 
-            <h2 id="version-52">Version 5.2</h2>
+            <h2 id="version-61">Version 6.1</h2>
+
+<p><strong>12 April 2017</strong></p>
+
+<h3 id="features">Features</h3>
+
+<ul>
+  <li>Enhanced logging - daily rotating log files written to App_Data\Logs, log level controllable in Web.Config</li>
+</ul>
+
+<h3 id="bugfixes">Bugfixes</h3>
+
+<ul>
+  <li>Fix problem with Git authentication with using the Windows Auth + EF Membership approach #668</li>
+  <li>Don’t throw exception if GitAuth token doesn’t contain colon #664</li>
+</ul>
+
+<h3 id="other-improvements">Other improvements</h3>
+
+<ul>
+  <li>Improved French translation #670</li>
+  <li>Updated libgit2sharp #650</li>
+  <li>Updated CommonMark #651</li>
+</ul>
+
+<h2 id="version-600">Version 6.0.0</h2>
+
+<p><strong>29 March 2017</strong></p>
+
+<h3 id="compatibility-issues">Compatibility issues</h3>
+
+<ul>
+  <li>This version adds column to several tables in the database. This makes it
+incompatible with previous versions of Bonobo. <strong>Please ensure that you have a 
+backup of your App_Data folder before you update.</strong></li>
+</ul>
+
+<h3 id="features-1">Features</h3>
+
+<ul>
+  <li>A new global option allows a repository to be created by pushing at a non-existent repo name #504</li>
+  <li>Repositories do not need to have an explicit repository administator #505</li>
+  <li>Allow push for anonymous user can now be set on a per repo basis</li>
+  <li>Repository details screen now has copy-to-clipboard buttons for Git URLs #453</li>
+  <li>‘Rescan’ button on Repository index screen allows new file-system repos to be discovered without restarting application #454</li>
+  <li>*.ts and *.json formatting support for file display #455</li>
+  <li>New diagnostic page at /home/diagnostics to help with support</li>
+  <li>Claims names are now more consistent with typical ADFS usage #488</li>
+  <li>Added following environment variables: <code>AUTH_USER_TEAMS</code>, <code>AUTH_USER_ROLES</code>, and <code>AUTH_USER_DISPLAYNAME</code>. See the FAQ for more information. #495</li>
+  <li>The linkify option for commit messages can now be set on a per repo basis</li>
+  <li>Verifies that username, repository and team names are unique as you type them</li>
+  <li>Verifies as you type regex entered for linkification</li>
+  <li>Added icons to repository listing indicating anonymous push/pull status</li>
+</ul>
+
+<h3 id="bugfixes-1">Bugfixes</h3>
+
+<ul>
+  <li>NullReferenceException in EFRepositoryPermissionService HasPermission  #441</li>
+  <li>Inconsistent repo name case-sensitivity (now consistently case-insensitve) #443</li>
+  <li>Correct error reported to Git clients for access to non-existent repo #447</li>
+  <li>Bonobo can start enough to allow access to settings if git directory is mis-configured #451</li>
+  <li>Bonobo doesn’t run on systems with particular machine.config RoleManager settings #486</li>
+  <li>The repository logo was not visible in all views</li>
+  <li>Fixed inability to browse folders in branches other then master #541</li>
+</ul>
+
+<h3 id="code-improvements">Code improvements</h3>
+
+<ul>
+  <li>Addition of automated test framework for testing web application</li>
+  <li>Rework of repository permissions Code #492</li>
+  <li>Abort startup if <code>BinaryGUID=False</code> is not set in Sqlite connections. </li>
+  <li>Improved exception handling in GitController #444</li>
+  <li>Upgrade all web.config files to MVC5 #457</li>
+  <li>Password salt now randomly generated at password update #462</li>
+  <li>Resharper settings provided so that Resharper suggested style matches project #465</li>
+  <li>UserModel and User entity class name properties made more consistent #470</li>
+  <li>Far fewer catch-all claueses silently swallowing exceptions</li>
+  <li>Updated jQuery and associated js code to 1.12.4 #586</li>
+</ul>
+
+<h2 id="version-52">Version 5.2</h2>
 
 <p><strong>17 March 2016</strong></p>
 
@@ -52,7 +134,7 @@
 
 <p><strong>11 January 2016</strong></p>
 
-<h3 id="features">Features</h3>
+<h3 id="features-2">Features</h3>
 
 <ul>
   <li>display general and personal repository URL as links - padremortius</li>
@@ -83,7 +165,7 @@
   <li>fix multiple tags support - kabongsteve</li>
 </ul>
 
-<h3 id="code-improvements">Code improvements</h3>
+<h3 id="code-improvements-1">Code improvements</h3>
 
 <ul>
   <li>install SQLite from nuget - padremortius</li>
@@ -95,13 +177,13 @@
 
 <p><strong>5 November 2015</strong></p>
 
-<h3 id="features-1">Features</h3>
+<h3 id="features-3">Features</h3>
 
 <ul>
   <li>add go to repository after creation - erdemyavuzyildiz</li>
 </ul>
 
-<h3 id="bug-fixes-2">Bug Fixes</h3>
+<h2 id="bug-fixes-2">Bug Fixes</h2>
 
 <ul>
   <li>ADRepository username handling - larshg</li>
@@ -117,7 +199,7 @@
 
 <p>This is a major release as Ollienator simplified and consolidated authorization and also added new providers, but your current web.config could be out of date and might need an update. Check out the new docs and update your web.config accordingly.</p>
 
-<h3 id="features-2">Features</h3>
+<h3 id="features-4">Features</h3>
 
 <ul>
   <li>major rework of authentication and authorization - ollienator</li>
@@ -144,7 +226,7 @@
 
 <p><strong>11 Jun 2015</strong></p>
 
-<h3 id="features-3">Features</h3>
+<h3 id="features-5">Features</h3>
 
 <ul>
   <li>can run on Azure Website</li>
@@ -170,7 +252,7 @@
 
 <p><strong>2 Apr 2015</strong></p>
 
-<h3 id="features-4">Features</h3>
+<h3 id="features-6">Features</h3>
 
 <ul>
   <li>new commit message format - alexkuznetsov</li>
@@ -193,7 +275,7 @@
 
 <p><strong>19 Feb 2015</strong></p>
 
-<h3 id="features-5">Features</h3>
+<h3 id="features-7">Features</h3>
 
 <ul>
   <li>Remember me checkbox - whosa</li>
@@ -218,7 +300,7 @@
 
 <p><strong>14 Dec 2014</strong></p>
 
-<h3 id="features-6">Features</h3>
+<h3 id="features-8">Features</h3>
 
 <ul>
   <li>Display readme.md in repository browser - kengibous</li>
@@ -234,7 +316,7 @@
 
 <p><strong>11 Dec 2014</strong></p>
 
-<h3 id="features-7">Features</h3>
+<h3 id="features-9">Features</h3>
 
 <ul>
   <li>Support for large files and large repos - kfarnung</li>
@@ -261,7 +343,7 @@
 
 <p><strong>30 Nov 2014</strong></p>
 
-<h3 id="features-8">Features</h3>
+<h3 id="features-10">Features</h3>
 
 <ul>
   <li>Post commit hook - stanshillis</li>
@@ -284,7 +366,7 @@
 
 <p><strong>22 Aug 2014</strong></p>
 
-<h3 id="features-9">Features</h3>
+<h3 id="features-11">Features</h3>
 
 <ul>
   <li>Clone button for repositories in web management UI - latop2604</li>
@@ -308,7 +390,7 @@
 
 <p><strong>19 May 2014</strong></p>
 
-<h3 id="features-10">Features</h3>
+<h3 id="features-12">Features</h3>
 
 <ul>
   <li>Repository browser performance improvement</li>
@@ -332,7 +414,7 @@
 
 <p><strong>27 March 2014</strong></p>
 
-<h3 id="features-11">Features</h3>
+<h3 id="features-13">Features</h3>
 
 <ul>
   <li>zh-TW Traditional Chinese Translation added - <a href="https://github.com/doggy8088">doggy8088</a></li>
@@ -352,7 +434,7 @@
 
 <p><strong>18 March 2014</strong></p>
 
-<h3 id="features-12">Features</h3>
+<h3 id="features-14">Features</h3>
 
 <ul>
   <li>Major redesign</li>
@@ -374,7 +456,7 @@
 
 <p><strong>3 March 2014</strong></p>
 
-<h3 id="features-13">Features</h3>
+<h3 id="features-15">Features</h3>
 
 <ul>
   <li>RAW file display</li>
@@ -402,7 +484,7 @@
 
 <p><strong>30 August 2013</strong></p>
 
-<h3 id="features-14">Features</h3>
+<h3 id="features-16">Features</h3>
 
 <ul>
   <li>Displaying current username in Windows Authentication mode</li>
@@ -420,7 +502,7 @@
 
 <p><strong>25 August 2013</strong></p>
 
-<h3 id="features-15">Features</h3>
+<h3 id="features-17">Features</h3>
 
 <ul>
   <li>Windows Authentication Support</li>
@@ -434,7 +516,7 @@
   <li>Fix text in Chinese translation</li>
 </ul>
 
-<h3 id="compatibility-issues">Compatibility Issues</h3>
+<h3 id="compatibility-issues-1">Compatibility Issues</h3>
 
 <ul>
   <li>Converts all the usernames to lowercase. 
@@ -451,7 +533,7 @@
 
 <p><strong>30 June 2013</strong></p>
 
-<h3 id="features-16">Features</h3>
+<h3 id="features-18">Features</h3>
 
 <ul>
   <li>Gitsharp removed</li>
@@ -476,7 +558,7 @@
 
 <p><strong>30 May 2013</strong></p>
 
-<h3 id="features-17">Features</h3>
+<h3 id="features-19">Features</h3>
 
 <ul>
   <li>Replaced multiselects with the checkbox lists - Mark N</li>
@@ -504,7 +586,7 @@
   <li>Fixed integration with TeamCity - <a href="https://github.com/micchickenburger">micchickenburger</a></li>
 </ul>
 
-<h3 id="compatibility-issues-1">Compatibility Issues</h3>
+<h3 id="compatibility-issues-2">Compatibility Issues</h3>
 
 <ul>
   <li>Password is not compatible with the previous version due to encoding change.
@@ -531,7 +613,7 @@
 
 <p><strong>9 October 2011</strong></p>
 
-<h3 id="features-18">Features</h3>
+<h3 id="features-20">Features</h3>
 
 <ul>
   <li>Administrator can create new user accounts</li>
@@ -568,7 +650,7 @@
 
             <hr />
             <div class="footer">
-                <p class="text-center">&copy; <a href="https://chodounsky.net">Jakub Chodounsky</a> 2014  &middot; <a href="/privacy-policy/">Privacy Policy</a></p>
+              <p class="text-center">&copy; <a href="https://chodounsky.net">Jakub Chodounsky</a> 2017  &middot; <a href="/privacy-policy/">Privacy Policy</a></p>
             </div>
 
             <div class="ad ad-right">
@@ -586,7 +668,7 @@
         <script src="/resources/js/lang-scala.js"></script>
         <script src="/resources/js/lang-sql.js"></script>
         <script src="/resources/js/lang-yaml.js"></script>
-        <script type="text/javascript" src="https://blockchain.info//Resources/wallet/pay-now-button.js"></script>
+        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us13.list-manage.com","uuid":"f3468acd0f9b5b95b5bed3a20","lid":"e30bb8a832"}) })</script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-40669399-1', 'bonobogitserver.com');
