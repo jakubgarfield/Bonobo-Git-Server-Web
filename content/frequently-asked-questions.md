@@ -27,24 +27,6 @@ You can
         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
   </div>
-  <div class="blockchain-btn span6" data-address="1NJUB7ZhsCSfz3p9VwwVgi7nPyByF3dhPP" data-shared="false">
-    <div class="blockchain stage-begin">
-        <img src="https://blockchain.info//Resources/buttons/donate_64.png"/>
-    </div>
-    <div class="blockchain stage-loading" style="text-align:center">
-        <img src="https://blockchain.info//Resources/loading-large.gif"/>
-    </div>
-    <div class="blockchain stage-ready">
-         <p align="center">Please Donate To Bitcoin Address: <b>[[address]]</b></p>
-         <p align="center" class="qr-code"></p>
-    </div>
-    <div class="blockchain stage-paid">
-         Donation of <b>[[value]] BTC</b> Received. Thank You.
-    </div>
-    <div class="blockchain stage-error">
-        <font color="red">[[error]]</font>
-    </div>
-  </div>
   <div class="gittip span3">
     <p><a href="https://www.gittip.com/jakubgarfield/"><img src="/resources/img/gittip.png" /></a></p>
   </div>
