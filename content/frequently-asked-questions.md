@@ -18,18 +18,13 @@ You can
 * recommend it to your friend or colleague or
 * donate.
 
-<div class="donations row-fluid">
-  <div class="paypal span3">
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="text-center">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="LDBBJBMZX7FN2">
-        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-    </form>
-  </div>
-  <div class="gittip span3">
-    <p><a href="https://www.gittip.com/jakubgarfield/"><img src="/resources/img/gittip.png" /></a></p>
-  </div>
+<div class="donations">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="text-center">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="LDBBJBMZX7FN2">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+  </form>
 </div>
 
 Thank you for using this project and your support.

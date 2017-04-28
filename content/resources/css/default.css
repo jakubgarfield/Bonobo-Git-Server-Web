@@ -1,37 +1,25 @@
 body { padding-bottom: 40px; }
-.container-narrow { margin: 0 auto; width: 800px; }
-.container-narrow > hr { margin: 30px 0; }
+.container-narrow { margin: 0 auto; max-width: 800px; }
 .jumbotron { margin: 60px 0 45px 0; text-align: center; }
 .jumbotron h1 { font-size: 72px; line-height: 1; }
 .jumbotron .btn { font-size: 21px; padding: 14px 24px; }
 .jumbotron .muted { margin-top: 7px;}
 .marketing { margin: 60px 0; }
 .marketing p + h4 { margin-top: 28px; }
-h3 a.brand  { background:url(/resources/img/git-logo.png) no-repeat 0px 0px; display: block; text-decoration: none; padding-left: 48px; padding-bottom: 3px;}
+h3 a.brand  { background:url(/resources/img/git-logo.png) no-repeat 0px 0px; display: block; text-decoration: none; padding-left: 48px; padding-bottom: 3px; max-width: 250px; float: left; }
 h3 a.brand:hover  { text-decoration: none; }
 
-.subscriptions.thumbnails { margin: 0 auto 2.5em 0; text-align: center;}
-.subscriptions ul { margin: 0;}
-.subscriptions ul li { margin: 0 0 0.5em 0; list-style: none;}
-.subscriptions h3.price { margin: 0.75em 0 0 0; }
-.subscriptions p.muted { margin-bottom: 1.75em; }
-
-.pricing.subscriptions { margin: 2em 0;}
-
-.donations { margin: 0 auto; text-align: center;}
-.blockchain.stage-begin img { cursor: pointer;}
-.paypal { margin-top: 2em; }
-.gittip { margin-top: 2em;}
-
-.ad { position: absolute; width: 160px; top: 40px;}
-.ad-right { margin-left: 840px; }
-.ad-center { margin-top: 1.5em;}
-
+.donations { margin: 2em auto 0 auto; text-align: center;}
 .newsletter-signup { width: 100%; text-align: center; background: #f2f2f2; margin-bottom: 1em; line-height: 50px; }
-.
 .newsletter-signup input[type="submit"] { background: #e85c41; }
 .newsletter-signup input[type="submit"]:hover { background: #db3a1b; }
 
 @media (max-width: 800px) {
-  .ad { display: none; }
+  .container-narrow { padding-left: 1em; padding-right: 1em; }
+  .nav li { float: none; text-align: center; }
+  .nav.pull-right { float: none; }
+  h3 a.brand { text-align: center; background: none; padding-left: 0; float: none; max-width: 100%; }
+  .jumbotron { margin: 30px 0 22px 0; }
+  .jumbotron h1 { font-size: 40px; }
+  .row-fluid .span4 { float: none; width: 100%; margin-left: 0; }
 }
