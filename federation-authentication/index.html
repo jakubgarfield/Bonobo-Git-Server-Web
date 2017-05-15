@@ -38,12 +38,6 @@
 
 <p>This authentication method uses an ADFS server to authenticate access to Bonobo Git.  The main benefit of using this method is that it is providing single-sign-on capabilities across all of your web sites, if the other sites support federation authentication as well.  </p>
 
-<h2 id="how-to-configure-adfs">How to configure ADFS?</h2>
-
-<p>Setting up an ADFS server is beyond the scope of this page, but there are a lot of articles you can read on <a href="https://technet.microsoft.com/en-us/library/cc772128%28v=ws.10%29.aspx">TechNet</a>.</p>
-
-<p>You will need to get the <em>metadata address</em> and <em>realm</em> for the trust you created in the ADFS configuration tool in order to configure Bonobo Git. No special claims will have to be issued, as the claims are internally handled by the <a href="/ad-membership/">Active Directory Membership Service</a>. </p>
-
 <h2 id="how-to-configure-bonobo-git-server">How to configure Bonobo Git Server?</h2>
 
 <p>Set up the <a href="/ad-membership/">Active Directory Membership Service</a>.</p>
@@ -61,6 +55,63 @@
 </code></pre>
 
 <p>Replace the <em>FederationMetadataAddress</em> and <em>FederationRealm</em> values with the ones you configured using the ADFS configuration tool.</p>
+
+<h2 id="how-to-configure-adfs">How to configure ADFS?</h2>
+
+<p>We’ll give you a recipe here, but if you need more information there is lots on <a href="https://technet.microsoft.com/en-us/library/cc772128%28v=ws.10%29.aspx">TechNet</a>.</p>
+
+<p>You will need to get the <em>metadata address</em> and <em>realm</em> for the trust you created in the ADFS configuration tool in order to configure Bonobo Git.</p>
+
+<ol>
+  <li>Open AD FS Management</li>
+  <li>Click <code>Add Relying Party Trust</code></li>
+  <li>Choose <code>Claims aware</code> and click <code>Start</code></li>
+  <li>Choose <code>Enter data about the relaying party manually</code> and click <code>Next</code></li>
+  <li>Enter a display name and a description if you want to and click <code>Next</code></li>
+  <li>We can skip this page so just click <code>Next</code></li>
+  <li>Choose <code>Enable support for the WS-Federation Passive protocol</code> and enter the URL to your git server (must be https)</li>
+  <li>Add the contents of your web.config <code>FederationRealm</code> to <code>Relying party trust identifier</code> if it differs from your url and click <code>Next</code></li>
+  <li>Now just click <code>Next</code> and <code>Next</code>, leave <code>Configure claims issuance policy for this application</code> checked and then <code>Close</code></li>
+</ol>
+
+<p>Now we are at the <code>Edit Claims Issuance Policy for **your name**</code>, we have to add four rules here.
+1. Click <code>Add Rule</code>
+2. Choose <code>Send Claims Using a Custom Rule</code> and click <code>Next</code>
+3. Enter a <code>Claim rule name</code>, use <code>Active Directory</code> for example
+4. Paste the following in <code>Custom rule</code>: 
+<code>c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]
+ =&gt; issue(store = "Active Directory", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn", "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname", "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname", "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress", "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+"http://temp.org/identity/claims/adObjectGuidBase64org"), query = ";sAMAccountName,givenName,sn,mail,tokenGroups,ObjectGuid;{0}", param = c.Value);</code>
+5. Click <code>Finish</code></p>
+
+<p>And the second rule:
+1. Click <code>Add Rule</code>
+2. Choose <code>Send Claims Using a Custom Rule</code> and click <code>Next</code>
+3. Enter a <code>Claim rule name</code>, use <code>Name ID</code> for example
+4. Paste the following in <code>Custom rule</code>: 
+<code>c:[Type == "http://temp.org/identity/claims/adObjectGuidBase64org"]
+ =&gt; issue(Type = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier", Issuer = c.Issuer, OriginalIssuer = c.OriginalIssuer, Value = c.Value, ValueType = c.ValueType, Properties["http://schemas.xmlsoap.org/ws/2005/05/identity/claimproperties/format"] = "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified");</code>
+5. Click <code>Finish</code></p>
+
+<p>The third rule:
+1. Click <code>Add Rule</code>
+2. Choose <code>Send Group Membership as a Claim</code> and click <code>Next</code>
+3. Enter <code>Administrator</code> at <code>Claim rule name</code>
+4. Select your administrators group as defined in web.config for <code>ActiveDirectoryRoleMapping</code>
+5. At <code>Outgoing claim type</code> select <code>Role</code>
+6. Enter <code>Administrator</code> at <code>Outgoing claim value</code>
+7. Click <code>Finish</code></p>
+
+<p>The fourth rule:
+1. Click <code>Add Rule</code>
+2. Choose <code>Send Group Membership as a Claim</code> and click <code>Next</code>
+3. Enter <code>Member</code> at <code>Claim rule name</code>
+4. Select your administrators group as defined in web.config for <code>ActiveDirectoryMemberGroupName</code>
+5. At <code>Outgoing claim type</code> select <code>Role</code>
+6. Enter <code>Member</code> at <code>Outgoing claim value</code>
+7. Click <code>Finish</code></p>
+
+<p>All we have to do now is click <code>Close</code> and AD FS has been setup correctly. Now configure Bonobo Git Server for ADFS</p>
 
 <h2 id="keep-in-mind">Keep in mind</h2>
 

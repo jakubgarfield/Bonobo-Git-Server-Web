@@ -38,10 +38,6 @@
 
 <p>This authentication method uses windows authentication in order to access Bonobo Git.  If your users are already authenticated in your internal network, this method will use the corresponding accounts without prompting for credentials again.</p>
 
-<p>While it is possible to use Windows Authentication with the standard <a href="/ef-membership/">Internal Membership Service</a>, keeping settings in sync between Windows and the internal database is a tedious manual task and users could, for example, change their password in either and therefore have to use different credentials for logging in to the web site and using their git client.</p>
-
-<p>So if you are using Windows Authentication, you should consider switching to the <a href="/ad-membership/">Active Directory Membership Service</a>. </p>
-
 <h2 id="how-to-configure-bonobo-git-server">How to configure Bonobo Git Server?</h2>
 
 <p>Set the AuthenticationProvider value in the application <strong>web.config</strong> according to the following lines.</p>
