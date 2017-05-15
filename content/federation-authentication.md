@@ -33,8 +33,7 @@ Replace the *FederationMetadataAddress* and *FederationRealm* values with the on
 
 We'll give you a recipe here, but if you need more information there is lots on [TechNet](<https://technet.microsoft.com/en-us/library/cc772128%28v=ws.10%29.aspx>).
 
-You will need to get the *metadata address* and *realm* for the trust you created in the ADFS configuration tool in order to configure Bonobo Git. No special claims will have to be issued, as the claims are internally handled by the [Active Directory Membership Service](/ad-membership/). 
-
+You will need to get the *metadata address* and *realm* for the trust you created in the ADFS configuration tool in order to configure Bonobo Git.
 
 1. Open AD FS Management
 2. Click `Add Relying Party Trust`
