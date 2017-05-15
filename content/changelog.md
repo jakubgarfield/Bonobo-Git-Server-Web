@@ -4,6 +4,26 @@ description: Tracks changes and bug fixes between different versions of Bonobo G
 tags: [Changelog, Changes, Bug Fixes, Features]
 ---
 
+## Version 6.2
+
+**15 May 2017**
+
+### Features
+
+* Broader search for AD domain #683
+* Reintroduce ActiveDirectoryDefaultDomain configuration item (helps #683)
+
+### Bugfixes
+
+* Revert Jwt library to v4.x to repair ADFS login #681
+* Reintroduce ActiveDirectoryDefaultDomain configuration item #685
+
+### Other improvements 
+
+* Permissions for unknown Windows users are set more sensibly when using internal membership #687
+* pt-BR translation improvements #678
+* All logging now moved to new app_data\logs files
+
 ## Version 6.1
 
 **12 April 2017**
