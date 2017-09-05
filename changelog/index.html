@@ -34,24 +34,48 @@
             </div>
             <hr />
 
-            <h2 id="version-622">Version 6.2.2</h2>
+            <h2 id="version-630">Version 6.3.0</h2>
 
-<p><strong>29 August 2017</strong></p>
+<p><strong>5 September 2017</strong></p>
 
 <h3 id="features">Features</h3>
+
+<ul>
+  <li>Allow named users to browse anonymous repos for which they don’t have
+explicit permission #708</li>
+  <li>Allow custom CSS files #705</li>
+</ul>
+
+<h3 id="bugfixes">Bugfixes</h3>
+
+<ul>
+  <li>Fix regression in 6.2.2 for certain domain configurations #731/#733</li>
+</ul>
+
+<h3 id="other-improvements">Other improvements</h3>
+
+<ul>
+  <li>Update compiler used for pages #702</li>
+</ul>
+
+<h2 id="version-622">Version 6.2.2</h2>
+
+<p><strong>28 August 2017</strong></p>
+
+<h3 id="features-1">Features</h3>
 
 <ul>
   <li>Allow anonymous users to browse repos without credentials where permitted #710 / @jeffgaroutte</li>
 </ul>
 
-<h3 id="bugfixes">Bugfixes</h3>
+<h3 id="bugfixes-1">Bugfixes</h3>
 
 <ul>
   <li>Don’t unescape Git passwords/usernames unnecessarily #704</li>
   <li>Improvements to AD domain handling #706</li>
 </ul>
 
-<h3 id="other-improvements">Other improvements</h3>
+<h3 id="other-improvements-1">Other improvements</h3>
 
 <ul>
   <li>Enable README display for all folders #713</li>
@@ -68,21 +92,21 @@
 
 <p><strong>15 May 2017</strong></p>
 
-<h3 id="features-1">Features</h3>
+<h3 id="features-2">Features</h3>
 
 <ul>
   <li>Broader search for AD domain #683</li>
   <li>Reintroduce ActiveDirectoryDefaultDomain configuration item (helps #683)</li>
 </ul>
 
-<h3 id="bugfixes-1">Bugfixes</h3>
+<h3 id="bugfixes-2">Bugfixes</h3>
 
 <ul>
   <li>Revert Jwt library to v4.x to repair ADFS login #681</li>
   <li>Reintroduce ActiveDirectoryDefaultDomain configuration item #685</li>
 </ul>
 
-<h3 id="other-improvements-1">Other improvements</h3>
+<h3 id="other-improvements-2">Other improvements</h3>
 
 <ul>
   <li>Permissions for unknown Windows users are set more sensibly when using internal membership #687</li>
@@ -94,20 +118,20 @@
 
 <p><strong>12 April 2017</strong></p>
 
-<h3 id="features-2">Features</h3>
+<h3 id="features-3">Features</h3>
 
 <ul>
   <li>Enhanced logging - daily rotating log files written to App_Data\Logs, log level controllable in Web.Config</li>
 </ul>
 
-<h3 id="bugfixes-2">Bugfixes</h3>
+<h3 id="bugfixes-3">Bugfixes</h3>
 
 <ul>
   <li>Fix problem with Git authentication with using the Windows Auth + EF Membership approach #668</li>
   <li>Don’t throw exception if GitAuth token doesn’t contain colon #664</li>
 </ul>
 
-<h3 id="other-improvements-2">Other improvements</h3>
+<h3 id="other-improvements-3">Other improvements</h3>
 
 <ul>
   <li>Improved French translation #670</li>
@@ -127,7 +151,7 @@ incompatible with previous versions of Bonobo. <strong>Please ensure that you ha
 backup of your App_Data folder before you update.</strong></li>
 </ul>
 
-<h3 id="features-3">Features</h3>
+<h3 id="features-4">Features</h3>
 
 <ul>
   <li>A new global option allows a repository to be created by pushing at a non-existent repo name #504</li>
@@ -145,7 +169,7 @@ backup of your App_Data folder before you update.</strong></li>
   <li>Added icons to repository listing indicating anonymous push/pull status</li>
 </ul>
 
-<h3 id="bugfixes-3">Bugfixes</h3>
+<h3 id="bugfixes-4">Bugfixes</h3>
 
 <ul>
   <li>NullReferenceException in EFRepositoryPermissionService HasPermission  #441</li>
@@ -198,7 +222,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>11 January 2016</strong></p>
 
-<h3 id="features-4">Features</h3>
+<h3 id="features-5">Features</h3>
 
 <ul>
   <li>display general and personal repository URL as links - padremortius</li>
@@ -241,7 +265,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>5 November 2015</strong></p>
 
-<h3 id="features-5">Features</h3>
+<h3 id="features-6">Features</h3>
 
 <ul>
   <li>add go to repository after creation - erdemyavuzyildiz</li>
@@ -263,7 +287,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p>This is a major release as Ollienator simplified and consolidated authorization and also added new providers, but your current web.config could be out of date and might need an update. Check out the new docs and update your web.config accordingly.</p>
 
-<h3 id="features-6">Features</h3>
+<h3 id="features-7">Features</h3>
 
 <ul>
   <li>major rework of authentication and authorization - ollienator</li>
@@ -290,7 +314,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>11 Jun 2015</strong></p>
 
-<h3 id="features-7">Features</h3>
+<h3 id="features-8">Features</h3>
 
 <ul>
   <li>can run on Azure Website</li>
@@ -316,7 +340,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>2 Apr 2015</strong></p>
 
-<h3 id="features-8">Features</h3>
+<h3 id="features-9">Features</h3>
 
 <ul>
   <li>new commit message format - alexkuznetsov</li>
@@ -339,7 +363,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>19 Feb 2015</strong></p>
 
-<h3 id="features-9">Features</h3>
+<h3 id="features-10">Features</h3>
 
 <ul>
   <li>Remember me checkbox - whosa</li>
@@ -364,7 +388,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>14 Dec 2014</strong></p>
 
-<h3 id="features-10">Features</h3>
+<h3 id="features-11">Features</h3>
 
 <ul>
   <li>Display readme.md in repository browser - kengibous</li>
@@ -380,7 +404,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>11 Dec 2014</strong></p>
 
-<h3 id="features-11">Features</h3>
+<h3 id="features-12">Features</h3>
 
 <ul>
   <li>Support for large files and large repos - kfarnung</li>
@@ -407,7 +431,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>30 Nov 2014</strong></p>
 
-<h3 id="features-12">Features</h3>
+<h3 id="features-13">Features</h3>
 
 <ul>
   <li>Post commit hook - stanshillis</li>
@@ -430,7 +454,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>22 Aug 2014</strong></p>
 
-<h3 id="features-13">Features</h3>
+<h3 id="features-14">Features</h3>
 
 <ul>
   <li>Clone button for repositories in web management UI - latop2604</li>
@@ -454,7 +478,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>19 May 2014</strong></p>
 
-<h3 id="features-14">Features</h3>
+<h3 id="features-15">Features</h3>
 
 <ul>
   <li>Repository browser performance improvement</li>
@@ -478,7 +502,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>27 March 2014</strong></p>
 
-<h3 id="features-15">Features</h3>
+<h3 id="features-16">Features</h3>
 
 <ul>
   <li>zh-TW Traditional Chinese Translation added - <a href="https://github.com/doggy8088">doggy8088</a></li>
@@ -498,7 +522,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>18 March 2014</strong></p>
 
-<h3 id="features-16">Features</h3>
+<h3 id="features-17">Features</h3>
 
 <ul>
   <li>Major redesign</li>
@@ -520,7 +544,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>3 March 2014</strong></p>
 
-<h3 id="features-17">Features</h3>
+<h3 id="features-18">Features</h3>
 
 <ul>
   <li>RAW file display</li>
@@ -548,7 +572,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>30 August 2013</strong></p>
 
-<h3 id="features-18">Features</h3>
+<h3 id="features-19">Features</h3>
 
 <ul>
   <li>Displaying current username in Windows Authentication mode</li>
@@ -566,7 +590,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>25 August 2013</strong></p>
 
-<h3 id="features-19">Features</h3>
+<h3 id="features-20">Features</h3>
 
 <ul>
   <li>Windows Authentication Support</li>
@@ -597,7 +621,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>30 June 2013</strong></p>
 
-<h3 id="features-20">Features</h3>
+<h3 id="features-21">Features</h3>
 
 <ul>
   <li>Gitsharp removed</li>
@@ -622,7 +646,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>30 May 2013</strong></p>
 
-<h3 id="features-21">Features</h3>
+<h3 id="features-22">Features</h3>
 
 <ul>
   <li>Replaced multiselects with the checkbox lists - Mark N</li>
@@ -677,7 +701,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>9 October 2011</strong></p>
 
-<h3 id="features-22">Features</h3>
+<h3 id="features-23">Features</h3>
 
 <ul>
   <li>Administrator can create new user accounts</li>
