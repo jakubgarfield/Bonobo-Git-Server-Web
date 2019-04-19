@@ -34,7 +34,44 @@
             </div>
             <hr />
 
-            <h2 id="version-630">Version 6.3.0</h2>
+            <h2 id="version-650">Version 6.5.0</h2>
+
+<p><strong>17 April 2019</strong></p>
+
+<h3 id="security">Security</h3>
+
+<p>This is an important security release which addresses two vulnerabilities, and users should upgrade immediately, 
+particularly if they permit anonymous or low-trust users access to any repository.  </p>
+
+<p>AD users who have been avoiding 6.2.2 or later versions because of problems introduced in that release
+should be safe to upgrade to this version, which removes that particular troublesome feature.</p>
+
+<p>We are grateful to the team at flab.cesnet.cz for the responsible disclosure of the vulnerabilities addressed by this release. </p>
+
+<h3 id="bugfixes">Bugfixes</h3>
+
+<ul>
+  <li>Sanitise service name in calls to Git services (CVE-2019-11217)</li>
+  <li>Prevent non-admin users maninpulating role membership (CVE-2019-11218)</li>
+</ul>
+
+<h2 id="version-640">Version 6.4.0</h2>
+
+<p><strong>13 November 2017 (unreleased)</strong></p>
+
+<h3 id="bugfixes-1">Bugfixes</h3>
+
+<ul>
+  <li>Removed #710 feature introduced in 6.2.2 as it has proved unreliable</li>
+</ul>
+
+<h3 id="other-improvements">Other improvements</h3>
+
+<ul>
+  <li>Added IE-Edge meta tag #740 @CatStarwind</li>
+</ul>
+
+<h2 id="version-630">Version 6.3.0</h2>
 
 <p><strong>5 September 2017</strong></p>
 
@@ -46,13 +83,13 @@ explicit permission #708</li>
   <li>Allow custom CSS files #705</li>
 </ul>
 
-<h3 id="bugfixes">Bugfixes</h3>
+<h3 id="bugfixes-2">Bugfixes</h3>
 
 <ul>
   <li>Fix regression in 6.2.2 for certain domain configurations #731/#733</li>
 </ul>
 
-<h3 id="other-improvements">Other improvements</h3>
+<h3 id="other-improvements-1">Other improvements</h3>
 
 <ul>
   <li>Update compiler used for pages #702</li>
@@ -68,14 +105,14 @@ explicit permission #708</li>
   <li>Allow anonymous users to browse repos without credentials where permitted #710 / @jeffgaroutte</li>
 </ul>
 
-<h3 id="bugfixes-1">Bugfixes</h3>
+<h3 id="bugfixes-3">Bugfixes</h3>
 
 <ul>
   <li>Don’t unescape Git passwords/usernames unnecessarily #704</li>
   <li>Improvements to AD domain handling #706</li>
 </ul>
 
-<h3 id="other-improvements-1">Other improvements</h3>
+<h3 id="other-improvements-2">Other improvements</h3>
 
 <ul>
   <li>Enable README display for all folders #713</li>
@@ -99,14 +136,14 @@ explicit permission #708</li>
   <li>Reintroduce ActiveDirectoryDefaultDomain configuration item (helps #683)</li>
 </ul>
 
-<h3 id="bugfixes-2">Bugfixes</h3>
+<h3 id="bugfixes-4">Bugfixes</h3>
 
 <ul>
   <li>Revert Jwt library to v4.x to repair ADFS login #681</li>
   <li>Reintroduce ActiveDirectoryDefaultDomain configuration item #685</li>
 </ul>
 
-<h3 id="other-improvements-2">Other improvements</h3>
+<h3 id="other-improvements-3">Other improvements</h3>
 
 <ul>
   <li>Permissions for unknown Windows users are set more sensibly when using internal membership #687</li>
@@ -124,14 +161,14 @@ explicit permission #708</li>
   <li>Enhanced logging - daily rotating log files written to App_Data\Logs, log level controllable in Web.Config</li>
 </ul>
 
-<h3 id="bugfixes-3">Bugfixes</h3>
+<h3 id="bugfixes-5">Bugfixes</h3>
 
 <ul>
   <li>Fix problem with Git authentication with using the Windows Auth + EF Membership approach #668</li>
   <li>Don’t throw exception if GitAuth token doesn’t contain colon #664</li>
 </ul>
 
-<h3 id="other-improvements-3">Other improvements</h3>
+<h3 id="other-improvements-4">Other improvements</h3>
 
 <ul>
   <li>Improved French translation #670</li>
@@ -169,7 +206,7 @@ backup of your App_Data folder before you update.</strong></li>
   <li>Added icons to repository listing indicating anonymous push/pull status</li>
 </ul>
 
-<h3 id="bugfixes-4">Bugfixes</h3>
+<h3 id="bugfixes-6">Bugfixes</h3>
 
 <ul>
   <li>NullReferenceException in EFRepositoryPermissionService HasPermission  #441</li>
@@ -200,7 +237,7 @@ backup of your App_Data folder before you update.</strong></li>
 
 <p><strong>17 March 2016</strong></p>
 
-<h3 id="security">Security</h3>
+<h3 id="security-1">Security</h3>
 
 <p>This is an important security release adding a CSRF protection to POST actions in the app. Also, it fixes a token validation on password reset function and adds the CSRF protection there as well.</p>
 
@@ -738,7 +775,7 @@ backup of your App_Data folder before you update.</strong></li>
 
             <hr />
             <div class="footer">
-              <p class="text-center">&copy; <a href="https://chodounsky.net">Jakub Chodounsky</a> 2018  &middot; <a href="/privacy-policy/">Privacy Policy</a></p>
+              <p class="text-center">&copy; <a href="https://chodounsky.net">Jakub Chodounsky</a> 2019  &middot; <a href="/privacy-policy/">Privacy Policy</a></p>
             </div>
 
         </div>
