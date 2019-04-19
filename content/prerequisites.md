@@ -17,5 +17,7 @@ This page covers all the dependencies and prerequisites for Bonobo Git Server in
 * [.NET Framework 4.6](https://www.microsoft.com/en-gb/download/details.aspx?id=48130)
     * Windows Vista SP2, Windows 7 SP1, 8, 8.1, 10 and higher
     * Windows Server 2008 R2, Windows Server 2008 SP2, Windows Server 2012 and higher
+* Windows 10 enable ASP.NET support
+  * Turn Windows Features on/off and under IIS -> World Wide Web Services -> Application Development Features.
 
 If everything is ready, let's get started with the [installation](/install/).
