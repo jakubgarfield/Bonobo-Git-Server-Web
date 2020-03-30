@@ -18,7 +18,7 @@ GEM
     kramdown (1.3.3)
     nanoc (3.7.0)
       cri (~> 2.3)
-    rack (1.5.2)
+    rack (2.2.2)
     rainpress (1.0)
     rake (12.0.0)
     rdoc (5.1.0)
