@@ -10,9 +10,9 @@ h3 a.brand  { background:url(/resources/img/git-logo.png) no-repeat 0px 0px; dis
 h3 a.brand:hover  { text-decoration: none; }
 
 .donations { margin: 2em auto 0 auto; text-align: center;}
-.newsletter-signup { width: 100%; text-align: center; background: #f2f2f2; margin-bottom: 1em; line-height: 50px; }
-.newsletter-signup input[type="submit"] { background: #e85c41; }
-.newsletter-signup input[type="submit"]:hover { background: #db3a1b; }
+.newsletter-signup { width: 100%; text-align: center; background: #f2f2f2; margin-bottom: 1.2em; line-height: 55px; }
+.newsletter-signup .btn { background: #e85c41; margin-left: 0.5em; margin-top: -3px; }
+.newsletter-signup .btn:hover { background: #db3a1b; }
 
 @media (max-width: 800px) {
   .container-narrow { padding-left: 1em; padding-right: 1em; }
